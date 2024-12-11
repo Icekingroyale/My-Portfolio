@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --main-bg-color: black;
+    --main-padding: 0;
+    --main-margin: 0;
+}
+
+html, body {
+    background-color: var(--main-bg-color);
+    padding: var(--main-padding);
+    margin: var(--main-margin);
+}
+
