@@ -1,25 +1,32 @@
-import React from "react";
-import Hero from "../assets/Hero.jpeg";
 import logo from "../assets/logo.png";
+import { useState } from "react";import Resume from "./Resume";
+import Contact from "./Contact";
+import { NavLink, Link } from "react-router-dom";
+
+
+
+
 
 const Header = () => {
   return (
-    <div className="w-full h-screen bg-blue-500 ">
-      <div className="flex">
-        <img src={logo} alt="site logo" className="sticky h-16" />
-      </div>
-      <div className="grid gap-6 main-hero-div">
-        <div className="hero-text w-96">
-          <h1 className="text-red-600 text-7xl text">Hi I'm Chimaobi</h1>
-          <p className="text-3xl text-yellow-300">
-            I'm a skilled software engineer specializing in creating fficient
-            and user-friendly web applications.
-          </p>
-        </div>
-        <figure className="">
-          <img src={Hero} alt="traditional man" className="h-96 rounded" />
-        </figure>
-      </div>
+    <div className="w-full h-10 bg-blue-500 ">
+      <nav className="flex justify-between">
+        <NavLink to="/">
+          <img src={logo} alt="site logo" className="h-14" />
+        </NavLink>
+        <ul className="flex gap-2 my-4 mx-2">
+          <NavLink to="/about"><li>About</li> </NavLink>
+          <Link to="https://medium.com/@okehchimaobi" target="_blank">
+          Articles</Link>
+          <NavLink to="/contact"> <li>Contact</li></NavLink>
+          <NavLink to="/resume"><li>Resume</li></NavLink>
+        </ul>
+           
+
+      </nav>
+
+    
+
     </div>
   );
 };

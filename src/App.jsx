@@ -1,17 +1,19 @@
 import React from "react";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import { BrowserRouter, Router, Routes } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
+import Homepage from "./components/Homepage";
+import About from "./components/About";
+import Resume from "./components/Resume";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <Hero />
-      <Contact/>
-      <Footer/>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
     </div>
   );
 };

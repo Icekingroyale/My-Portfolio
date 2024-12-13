@@ -2,15 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-    --main-bg-color: black;
+
     --main-padding: 0;
     --main-margin: 0;
 }
 
 html, body {
-    background-color: var(--main-bg-color);
     padding: var(--main-padding);
     margin: var(--main-margin);
 }
 
+
+@layer base {
+    body {
+      @apply text-base sm:text-lg md:text-xl; /* Base font size for body */
+    }
+  
+    h1 {
+      @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl; /* Heading sizes */
+    }
+  
+    h2 {
+      @apply text-2xl sm:text-3xl md:text-4xl; /* Subheadings */
+    }
+  
+    p {
+      @apply text-sm sm:text-base md:text-lg; /* Paragraph text */
+    }
+  }
