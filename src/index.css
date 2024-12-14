@@ -12,6 +12,7 @@
 html, body {
     padding: var(--main-padding);
     margin: var(--main-margin);
+    box-sizing: border-box;
 }
 
 
@@ -21,11 +22,15 @@ html, body {
     }
   
     h1 {
-      @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl; /* Heading sizes */
+      @apply text-3xl font-medium sm:text-4xl md:text-5xl lg:text-6xl; /* Heading sizes */
     }
   
     h2 {
-      @apply text-2xl sm:text-3xl md:text-4xl; /* Subheadings */
+      @apply text-2xl font-medium sm:text-3xl md:text-4xl; /* Subheadings */
+    }
+
+    h3 {
+      @apply text-xl font-medium sm:text-2xl md:text-3xl;
     }
   
     p {

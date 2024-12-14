@@ -1,9 +1,9 @@
 import React from "react";
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Homepage from "./components/Homepage";
-import About from "./components/About";
-import Resume from "./components/Resume";
-import Contact from "./components/Contact";
+import About from "./components/navlinks/About";
+import Resume from "./components/navlinks/Resume";
+import Contact from "./components/navlinks/Contact";
 
 const App = () => {
   return (
