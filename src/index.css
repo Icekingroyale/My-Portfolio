@@ -4,10 +4,15 @@
 
 
 :root {
+    --primary: #1230AE;
+    --primary-light: #6C48C5;
+    --secondary: #C68FE6;
+    --secondary-light: #FFF7F7;
 
     --main-padding: 0;
     --main-margin: 0;
 }
+
 
 html, body {
     padding: var(--main-padding);
@@ -37,3 +42,13 @@ html, body {
       @apply text-sm sm:text-base md:text-lg; /* Paragraph text */
     }
   }
+
+@layer components{
+  .projects_img_div{
+    @apply h-32 object-cover object-center mx-10 md:w-96 ;
+  }
+
+  .projects_img{
+    @apply w-full h-full object-cover object-center;
+  }  
+}
