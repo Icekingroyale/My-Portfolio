@@ -1,7 +1,7 @@
 import React from "react";
 import project1 from "../assets/image-hero.jpg";
 import project2 from "../assets/form.png";
-import project3 from "../../public/icon.jpg";
+import project3 from "../assets/icon.jpg";
 import project4 from "../assets/Hero.jpeg";
 
 const Projects = () => {
@@ -27,7 +27,7 @@ const Projects = () => {
         <a
           href="https://icekingroyale.github.io/ChimaobiOkeh/"
           target="_blank"
-          className="projects_img_div |lg:mt-20"
+          className="projects_img_div"
         >
           <img src={project3} alt="" className="projects_img" />
 
