@@ -45,10 +45,10 @@ html, body {
 
 @layer components{
   .projects_img_div{
-    @apply h-32 object-cover object-center mx-10 md:w-96;
+    @apply h-32 object-cover object-center mx-10 md:w-96 hover:underline;
   }
 
   .projects_img{
-    @apply w-full h-full object-cover object-center;
+    @apply w-full h-full object-cover object-center hover:opacity-40;
   }  
 }

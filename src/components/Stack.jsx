@@ -5,6 +5,8 @@ import wordpress from "../assets/wordpress.png";
 import tailwind from "../assets/tailwind.svg";
 
 
+// 02-02-2025
+//TODO - use scattered tech icons like I have on my github readme
 
 
 

@@ -14,7 +14,7 @@ const Footer = () => {
       <h2 className="px-5 py-14"> SAY HELLO </h2>
 
       <nav className="flex flex-col gap-5 px-5 w-fit">
-        <a href="mailto:okehchimaobi@outlook.com">okehchimaobi@outlook.com</a>
+        <a href="mailto:okehchimaobi@gmail.com">okehchimaobi@gmail.com</a>
         <a href="https://wa.link/dfkzgj">+2349034777214</a>
       </nav>
 

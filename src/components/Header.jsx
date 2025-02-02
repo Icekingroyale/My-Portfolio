@@ -2,6 +2,7 @@ import Logo from "../assets/Logo.png";
 import React, { useState } from "react";
 import NavigationLinks from './navlinks/NavigationLinks.jsx';
 import MenuLinks from "./navlinks/MenuLinks.jsx";
+import LgMenuDrop from "./LgMenuDrop.jsx";
 import { Sling as Hamburger } from 'hamburger-react'
 import { NavLink } from "react-router-dom";
 
@@ -36,8 +37,21 @@ const Header = () => {
             </div>
 
             <button className="h-14 z-50 absolute right-0" >
-                <Hamburger toggled={isToggled} toggle={handleToggle}/>
+                <Hamburger toggled={isToggled} toggle={handleToggle} />
             </button>
+
+            <div className={`${
+          isToggled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
+        } transition-all duration-500 ease-in-out transform`}>
+                <LgMenuDrop />
+            </div>
+
+
+            {/* <div className={`${isToggled ? 'block' : 'hidden'}`}>
+                My code 02-02-2025
+                <LgMenuDrop />
+            </div> */}
+
         </header>
     </>;
     return header;

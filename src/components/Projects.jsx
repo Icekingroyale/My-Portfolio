@@ -5,8 +5,13 @@ import project3 from "../assets/icon.jpg";
 import project4 from "../assets/Hero.jpeg";
 
 const Projects = () => {
-  return (
 
+  //02-02-2025
+  //TODO - Add a button to view more projects
+  //     - Use an eye icon and a fragment tag icon to link to the project code and live app respectively
+
+
+  return (
     <div className="min-h-screen text-center place-content-center place-items-center">
       <h2 className="py-5">Recent Projects</h2>
       <div className="grid justify-center grid-cols-1 lg:grid-cols-2 gap-8 md:gap-24 lg:my-10">
