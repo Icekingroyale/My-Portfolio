@@ -10,7 +10,7 @@ const year = new Date().getFullYear()
 
 const Footer = () => {
   return (
-    <footer className="h-screen text-white footer bg-slate-900">
+    <footer className="h-screen text-white footer bg-[#27445D]">
       <h2 className="px-5 py-14"> SAY HELLO </h2>
 
       <nav className="flex flex-col gap-5 px-5 w-fit">

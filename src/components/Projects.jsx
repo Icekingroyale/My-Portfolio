@@ -12,7 +12,7 @@ const Projects = () => {
 
 
   return (
-    <div className="min-h-screen text-center place-content-center place-items-center">
+    <div className="bg-[#71BBB2] min-h-screen text-center place-content-center place-items-center">
       <h2 className="py-5">Recent Projects</h2>
       <div className="grid justify-center grid-cols-1 lg:grid-cols-2 gap-8 md:gap-24 lg:my-10">
         <a href="" className="projects_img_div">

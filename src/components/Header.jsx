@@ -23,7 +23,7 @@ const Header = () => {
     //    - (bonus) Keep the/a hamburger component even on pc Screens to display a Footer contents with unique styles and cool animations
 
     let header = <>
-        <header className="w-full flex justify-between">
+        <header className="w-full flex justify-between bg-[#EFE9D5]">
 
             <NavLink to="/">
                 <img src={Logo} alt="site logo" className="h-14" />
