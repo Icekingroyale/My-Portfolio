@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import facebook from "../assets/facebook.svg";
-import github from "../assets/gitHub.svg";
+import github from "../assets/github.svg";
 import linkedin from "../assets/linkedIn.svg";
 import X from "../assets/x.svg";
 
