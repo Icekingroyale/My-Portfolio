@@ -4,12 +4,18 @@ import laravel from "../assets/laravel.svg";
 import wordpress from "../assets/wordpress.png";
 import tailwind from "../assets/tailwind.svg";
 
+
+
+
+
 const Stack = () => {
   return (
-    <div className="h-screen bg-red-500">
+    <div className="min-h-screen">
       <h2 className="py-5 font-medium text-center"> My Tech Stack </h2>
       <div className="grid justify-center grid-cols-1 gap-10 md:grid-cols-2 sm:grid-cols-2">
-        <figure className="flex gap-10 mx-10 bg-slate-500 rounded-xl">
+
+
+        <figure className="flex gap-10 mx-10 bg-slate-500 rounded-xl max-h-28">
           <img src={laravel} alt="laravel logo" className="h-20 m-2 " />
           <figcaption>
             <h3>Laravel</h3>

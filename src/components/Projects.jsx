@@ -6,9 +6,10 @@ import project4 from "../assets/Hero.jpeg";
 
 const Projects = () => {
   return (
-    <div className="h-screen text-center bg-green-500">
+
+    <div className="min-h-screen text-center place-content-center place-items-center">
       <h2 className="py-5">Recent Projects</h2>
-      <div className="grid justify-center lg:px-40 grid-cols-1 md:grid-cols-2 gap-10 lg:my-10">
+      <div className="grid justify-center grid-cols-1 lg:grid-cols-2 gap-8 md:gap-24 lg:my-10">
         <a href="" className="projects_img_div">
           <img src={project4} alt="" className="projects_img" />
 
@@ -37,7 +38,7 @@ const Projects = () => {
           target="_blank"
           className="projects_img_div"
         >
-          <img src={project2} alt="" className="projects_img lg:mt-20" />
+          <img src={project2} alt="" className="projects_img" />
 
           <p>Contact Form</p>
         </a>

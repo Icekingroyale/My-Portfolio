@@ -7,7 +7,7 @@ import Contact from "./components/navlinks/Contact";
 
 const App = () => {
   return (
-    <div>
+    <div className='overflow-x-hidden bg-primary'>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />

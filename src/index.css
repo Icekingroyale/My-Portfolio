@@ -45,7 +45,7 @@ html, body {
 
 @layer components{
   .projects_img_div{
-    @apply h-32 object-cover object-center mx-10 md:w-96 ;
+    @apply h-32 object-cover object-center mx-10 md:w-96;
   }
 
   .projects_img{

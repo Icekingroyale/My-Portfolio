@@ -9,13 +9,13 @@ import Footer from './Footer'
 
 const Mainpage = () => {
   return (
-    <div>
+    <>
         <Header />
         <Hero />
         <Projects />
         <Stack />
         <Footer />      
-    </div>
+    </>
   )
 }
 

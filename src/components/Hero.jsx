@@ -1,22 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import hero from "../assets/Hero.jpeg";
 
 const Hero = () => {
+  const [isHovered, setIsHovered] = useState(false)
+
+  const handleMouseOver = () => {
+    // setIsHovered(!isHovered)
+    console.log('Mouse hovered')
+  }
+
+
   return (
-    <div className="h-screen lg:p-3 bg-blue-500 w-full  -my-1">
-      <section className="flex flex-col md:flex-row gap-5 items-center">
-        <article className="">
-          <h1 className="text-red-600 ">Hi I'm Chimaobi</h1>
-          <h2 className="text-yellow-300">
-            I'm a skilled software engineer specializing in creating efficient
-            and user-friendly web applications.
-          </h2>
-        </article>
-        <figure className="">
-          <img src={hero} alt="traditional man" className="w-52" />
-        </figure>
-      </section>
-    </div>
+    <section className="flex flex-col md:flex-row gap-6 items-center min-h-screen w-full justify-center md:p-10">
+      <article className="text-center md:text-left">
+        <h1 className="text-red-600">Hi I'm Chimaobi</h1>
+        <h2 className="text-yellow-300 mt-3 max-w-96">
+          Lorem ipsum dolor sit amet <strong onMouseOver={handleMouseOver}>HOVER</strong> consectetur adipisicing elit. Dolorem neque impedit facere aspernatur <strong onMouseOver={handleMouseOver}>HOVER</strong> libero quo minus eveniet tempora porro, fugit quod.
+        </h2>
+      </article>
+      <figure className="w-52">
+        <img src={hero} alt="traditional man" className="hover:rotate-6 hover:scale-105 transition-transform duration-300 ease-in-out"/>
+      </figure>
+    </section>
   );
 };
 
