@@ -17,7 +17,7 @@ const Hero = () => {
 
 
   return (
-    <section className="bg-[#EFE9D5] flex flex-col md:flex-row gap-6 items-center min-h-screen w-full justify-center md:p-10 -my-1">
+    <section className="bg-[#EFE9D5] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')] flex flex-col md:flex-row gap-6 items-center min-h-screen w-full justify-center md:p-10 -my-1">
       <article className="text-center md:text-left">
         <h1 className="text-red-600">Hi I'm Chimaobi</h1>
         <h2 className="mt-3 max-w-96">

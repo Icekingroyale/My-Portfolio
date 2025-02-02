@@ -12,7 +12,7 @@ import tailwind from "../assets/tailwind.svg";
 
 const Stack = () => {
   return (
-    <div className="min-h-screen bg-[#497D74]">
+    <div className="min-h-screen bg-[#497D74] bg-[url('https://www.transparenttextures.com/patterns/diagonales-decalees.png')]">
       <h2 className="py-5 font-medium text-center"> My Tech Stack </h2>
       <div className="grid justify-center grid-cols-1 gap-10 md:grid-cols-2 sm:grid-cols-2">
 

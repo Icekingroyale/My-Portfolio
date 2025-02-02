@@ -23,7 +23,7 @@ const Header = () => {
     //    - (bonus) Keep the/a hamburger component even on pc Screens to display a Footer contents with unique styles and cool animations
 
     let header = <>
-        <header className="w-full flex justify-between bg-[#EFE9D5]">
+        <header className="w-full flex justify-between bg-[#EFE9D5] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')]">
 
             <NavLink to="/">
                 <img src={Logo} alt="site logo" className="h-14" />
@@ -40,10 +40,9 @@ const Header = () => {
                 <Hamburger toggled={isToggled} toggle={handleToggle} />
             </button>
 
-            <div className={`${
-          isToggled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
-        } transition-all duration-500 ease-in-out transform`}>
-                <LgMenuDrop />
+            <div className={`${isToggled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
+                } transition-all duration-500 ease-in-out transform`}>
+               <LgMenuDrop />
             </div>
 
 

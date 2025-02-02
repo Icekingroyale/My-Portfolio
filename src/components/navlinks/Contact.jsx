@@ -4,7 +4,7 @@ import Footer from '../Footer'
 
 const Contact = () => {
   return (
-    <div className='h-screen bg-green-500 contact'>
+    <div className="bg-[#EFE9D5] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')]">
       <Header/>
         <h2 className='text-center'>Contact Me</h2>
       <form action="#" className='flex flex-col gap-5 mx-5 my-5 justify-center md:w-3/5 md:mx-auto'>
