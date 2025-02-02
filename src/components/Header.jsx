@@ -1,4 +1,4 @@
-import Logo from "../assets/logo.png";
+import Logo from "../assets/Logo.png";
 import React, { useState } from "react";
 import NavigationLinks from './navlinks/NavigationLinks.jsx';
 import MenuLinks from "./navlinks/MenuLinks.jsx";
@@ -25,7 +25,7 @@ const Header = () => {
         <header className="w-full flex justify-between">
 
             <NavLink to="/">
-                <img src={logo} alt="site logo" className="h-14" />
+                <img src={Logo} alt="site logo" className="h-14" />
             </NavLink>
 
 

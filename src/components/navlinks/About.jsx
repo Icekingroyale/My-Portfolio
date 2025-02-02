@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import Logo from "../../assets/Logo.png";
 import Footer from "../Footer";
 import gym from "../../assets/gympic.jpg";
 import prof from "../../assets/profpic.jpg";
@@ -14,7 +14,7 @@ const About = () => {
         <Link to="/" >
 
             <img
-              src={logo}
+              src={Logo}
               alt="site logo"
               className="sticky h-14"
             />
