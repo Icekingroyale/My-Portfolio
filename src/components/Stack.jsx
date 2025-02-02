@@ -1,6 +1,6 @@
 import React from "react";
-import react from "../assets/react.svg";
-import laravel from "../assets/laravel.svg";
+import react from "../assets/React.svg";
+import laravel from "../assets/Laravel.svg";
 import wordpress from "../assets/wordpress.png";
 import tailwind from "../assets/tailwind.svg";
 
