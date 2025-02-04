@@ -20,7 +20,7 @@ const Header = () => {
     // 25-01-2025
     //TODO - Make the header stick on all pages but with different background and content colors
     //     - Make Active links have a different color
-    //    - (bonus) Keep the/a hamburger component even on pc Screens to display a Footer contents with unique styles and cool animations
+    //    - (bonus) Keep the hamburger component even on pc Screens to display a Footer contents with unique styles and cool animations
     //    - Fix scroll issue when MenuLinks are open
 
 
@@ -28,7 +28,7 @@ const Header = () => {
     // TODO - The header is fixed and the background color is transparent, I want to make whatever that is scrolled into the space of the to be blur
 
     let header = <>
-        <header className="fixed bg-transparent w-full flex justify-between bg-[#EFE9D5] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')]">
+        <header className="fixed bg-transparent w-full flex justify-between bg-[#EFE9D5]">
 
             <NavLink to="/">
                 <img src={Logo} alt="site logo" className="h-14" />
