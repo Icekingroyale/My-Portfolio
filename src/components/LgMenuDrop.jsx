@@ -1,23 +1,34 @@
 import React from 'react'
+import facebook from "../assets/facebook.svg";
+import github from "../assets/github.svg";
+import linkedin from "../assets/linkedin.svg";
+import X from "../assets/x.svg";
 
 
 
-//02-02-2025
-//TODO - replace the list items with Social Media Icons that bounces in from the top and jiggles on hover
+
+//03-02-2025
+//TODO - The social media icons should drop in with an animation justl like it's container
 
 
 
 const LgMenuDrop = () => {
   return (
     <>
-        <div className='bg-purple-600 w-60 absolute top-0 right-0 z-10 hidden md:block'>
-            <ul className='flex flex-col text-center justify-evenly gap-5 p-5 h-80 text-white' >
-            <li>LinkedIn</li>
-            <li>GitHub</li>
-            <li>X</li>
-            <li>Facebook</li>
-            </ul>
-        </div>
+      <div className='bg-gray-600 w-60 absolute top-0 right-0 z-10 hidden md:flex md:flex-col items-center py-10 gap-20'>
+        <a href="https://www.linkedin.com/in/chimaobi-okeh" target="_blank">
+          <img src={linkedin} alt="linkedin logo" className="h-10 invert" />
+        </a>
+        <a href="https://github.com/Icekingroyale" target="_blank">
+          <img src={github} alt="github logo" className="h-10 invert" />
+        </a>
+        <a href="https://x.com/Icekingroyale" target="_blank">
+          <img src={X} alt="X logo" className="h-10 invert" />
+        </a>
+        <a href="https://www.facebook.com/Icekingroyale/" target="_blank">
+          <img src={facebook} alt="facebook logo" className="h-10 invert" />
+        </a>
+      </div>
     </>
   )
 }

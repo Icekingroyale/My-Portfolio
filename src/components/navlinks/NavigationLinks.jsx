@@ -2,11 +2,16 @@ import React from 'react'
 import { NavLink, Link } from "react-router-dom";
 
 
+//03-02-2025
+// TODO - make navlinks active & add a hover animation
+
+
 const NavigationLinks = () => {
     return (
-        <div className='hidden md:flex md:flex-row w-1/2 md:items-center md:justify-center mx-auto'>
+        <div className='hidden md:flex md:flex-row md:items-center md:justify-center mx-auto '>
 
             <nav className=" gap-5 mx-4 my-4 flex" >
+                <NavLink to='/'>Home</NavLink>
                 <NavLink to="/about">About</NavLink>
                 <Link to="https://medium.com/@okehchimaobi" target="_blank">
                     Articles</Link>

@@ -6,11 +6,18 @@ import linkedin from "../assets/linkedin.svg";
 import X from "../assets/x.svg";
 
 
+
+// 03-02-2025
+// TODO - fix the issues with the inverted social icons and the menuLink background color
+
+
+
+
 const year = new Date().getFullYear()
 
 const Footer = () => {
   return (
-    <footer className="h-screen text-white footer bg-[#27445D] bg-[url('https://www.transparenttextures.com/patterns/dark-mosaic.png')]">
+    <footer className="min-h-screen text-white footer bg-[#27445D] bg-[url('https://www.transparenttextures.com/patterns/dark-mosaic.png')]">
       <h2 className="px-5 py-14"> SAY HELLO </h2>
 
       <nav className="flex flex-col gap-5 px-5 w-fit">
@@ -19,7 +26,7 @@ const Footer = () => {
       </nav>
 
       <nav>
-        <ul className="flex flex-col px-5 mx-2 my-16 gp-5 w-fit">
+        <ul className="flex flex-col px-5 mx-2 my-16 gap-5 w-fit">
           <NavLink to="/about">
             <li>About</li>{" "}
           </NavLink>
@@ -35,9 +42,9 @@ const Footer = () => {
 
       <hr className="mx-5 my-20" />
 
-      <section className="flex flex-row justify-between">
-        <p className="px-5">&copy; Chimaobi Okeh {year}</p>
-        <figure className="hidden gap-6 px-5 sm:flex">
+      <section className="flex flex-col-reverse gap-10 md:flex-row md:justify-between">
+        <p className="px-5 mx-auto md:mx-0">&copy; Chimaobi Okeh {year}</p>
+        <figure className="gap-16 px-5 flex">
          <a href="https://www.linkedin.com/in/chimaobi-okeh" target="_blank">
            <img src={linkedin} alt="linkedin logo" className="h-10 invert" />
           </a>
