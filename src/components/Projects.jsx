@@ -8,7 +8,7 @@ const Projects = () => {
 
   //02-02-2025
   //TODO - Add a button to view more projects
-  //     - Use an eye icon and a fragment tag icon to link to the project code and live app respectively
+  //TODO - Use an eye icon and a fragment tag icon to link to the project code and live app respectively
 
 
   return (

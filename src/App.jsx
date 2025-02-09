@@ -1,13 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Homepage from "./components/Homepage";
+import Homepage from "./components/pages/Homepage";
 import About from "./components/navlinks/About";
 import Resume from "./components/navlinks/Resume";
 import Contact from "./components/navlinks/Contact";
 
 const App = () => {
   return (
-    <div className='overflow-x-hidden bg-primary'>
+    <div className='overflow-hidden'>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />

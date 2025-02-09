@@ -12,10 +12,12 @@ const Header = () => {
     const [isToggled, setIsToggled] = useState(false);
 
 
+
     const handleToggle = () => {
         setIsToggled(!isToggled)
-
     }
+
+
 
     // 25-01-2025
     //TODO - Make the header stick on all pages but with different background and content colors
@@ -28,7 +30,7 @@ const Header = () => {
     // TODO - The header is fixed and the background color is transparent, I want to make whatever that is scrolled into the space of the to be blur
 
     let header = <>
-        <header className="fixed bg-transparent w-full flex justify-between bg-[#EFE9D5]">
+        <header className='fixed bg-transparent w-full flex justify-between bg-[#EFE9D5]'>
 
             <NavLink to="/">
                 <img src={Logo} alt="site logo" className="h-14" />

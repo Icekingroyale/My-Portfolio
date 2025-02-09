@@ -8,7 +8,7 @@ import X from "../assets/x.svg";
 
 
 //03-02-2025
-//TODO - The social media icons should drop in with an animation justl like it's container
+//TODO - The social media icons should drop in with an animation just like it's container
 
 
 
