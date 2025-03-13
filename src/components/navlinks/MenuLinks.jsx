@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const MenuLinks = () => {
     return (
-        <div className="bg-[#EFE9D5] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')] w-screen h-screen z-50 content-center md:hidden" >
+        <div className="bg-[#EFE9D5] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')] w-screen h-screen content-center md:hidden overflow-y-hidden" >
             <ul className='mx-auto flex flex-col gap-14 items-center text-2xl font-semibold mb-32'>
                 <NavLink to='/'>Home</NavLink>
 

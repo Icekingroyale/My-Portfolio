@@ -9,6 +9,7 @@ import X from "../assets/x.svg";
 
 // 03-02-2025
 // TODO - fix the issues with the inverted social icons and the menuLink background color
+//  replace the inverted svg with a white one or change to a new background that'll match the original black
 
 
 

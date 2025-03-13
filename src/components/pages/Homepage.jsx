@@ -16,9 +16,11 @@ const Mainpage = () => {
   const isLargeScreen = useMediaQuery({minWidth: 1024})
 
   return isLargeScreen ? (
-    <Fullpage className="border">
-      <FullpageNavigation /> {/* adds the navigation clicks on the side of the large screen */}
-      <FullPageSections>
+
+    <Fullpage >
+      <FullpageNavigation  /> {/* adds the navigation clicks on the side of the large screen */}
+
+        <FullPageSections>
         <FullpageSection>
           <Header />
           <Hero />
@@ -42,6 +44,7 @@ const Mainpage = () => {
         </FullpageSection>
       </FullPageSections>
     </Fullpage>
+
   ) : <>
   <Header/>
     <Hero/>

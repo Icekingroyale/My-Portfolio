@@ -29,8 +29,11 @@ const Header = () => {
     //03-02-25
     // TODO - The header is fixed and the background color is transparent, I want to make whatever that is scrolled into the space of the to be blur
 
+    //12-02-25
+    // TODO - Resolve the FullPageNav and LgMenuDropDown conflex
+
     let header = <>
-        <header className='fixed bg-transparent w-full flex justify-between bg-[#EFE9D5]'>
+        <header className='fixed bg-transparent w-full flex justify-between bg-[#EFE9D5] z-[1000] border'>
 
             <NavLink to="/">
                 <img src={Logo} alt="site logo" className="h-14" />
@@ -43,7 +46,7 @@ const Header = () => {
                 <MenuLinks />
             </div>
 
-            <button className="h-14 z-50 absolute right-0">
+            <button className="h-14 z-[1000] absolute right-0 border">
                 <Hamburger toggled={isToggled} toggle={handleToggle} />
             </button>
 

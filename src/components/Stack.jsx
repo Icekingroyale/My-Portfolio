@@ -1,62 +1,116 @@
 import React from "react";
-import react from "../assets/React.svg";
-import laravel from "../assets/Laravel.svg";
-import wordpress from "../assets/wordpress.png";
-import tailwind from "../assets/tailwind.svg";
+import useEmblaCarousel from "embla-carousel-react";
+import { useMediaQuery } from "react-responsive"; //to conditional render the Carousel for mobile screens only
+
+
+
+
 
 
 // 02-02-2025
 //TODO - use scattered tech icons like I have on my github readme
 
+// 13-02-2025
+//TODO - use embla carousel to display the tech stack and tools 
+
 
 
 const Stack = () => {
-  return (
+
+
+  const [emblaRef] = useEmblaCarousel();
+
+  const isMobileScreen = useMediaQuery({maxWidth: 425})
+
+  return isMobileScreen ? (
     <div className="min-h-screen bg-[#497D74] bg-[url('https://www.transparenttextures.com/patterns/diagonales-decalees.png')]">
-      <h2 className="py-5 font-medium text-center"> My Tech Stack </h2>
-      <div className="grid justify-center grid-cols-1 gap-10 md:grid-cols-2 sm:grid-cols-2">
 
+      <h2 className="py-5 font-medium text-center"> Tech Stack & Tools </h2>
 
-        <figure className="flex gap-10 mx-10 bg-slate-500 rounded-xl max-h-28">
-          <img src={laravel} alt="laravel logo" className="h-20 m-2 " />
-          <figcaption>
-            <h3>Laravel</h3>
-            <p>
-              I develop full-stack application with Laravel (blade & inertia)
+      <div className="border overflow-hidden" ref={emblaRef}>
+        <div className="flex ">
 
-            </p>
-          </figcaption>
-        </figure>
-        <figure className="flex gap-10 mx-10 bg-slate-500 rounded-xl">
-          <img src={react} alt="reactjs logo" className="h-20 m-2" />
-          <figcaption>
-            <h3>React</h3>
-            <p>
-              ReactJs was my intro to scalable front-end UI components
-            </p>
-          </figcaption>
-        </figure>
-        <figure className="flex gap-10 mx-10 bg-slate-500 rounded-xl">
-          <img src={wordpress} alt="wordpress logo" className="h-20 m-2" />
-          <figcaption>
-            <h3>WordPress</h3>
-            <p>
-              I develop custom wordpress themes and plugins to enable me create CRM for my clients.
-            </p>
-          </figcaption>
-        </figure>
-        <figure className="flex gap-10 mx-10 bg-slate-500 h- rounded-xl">
-          <img src={tailwind} alt="tailwindcss logo" className="h-20 m-2" />
-          <figcaption>
-            <h3>Tailwind CSS</h3>
-            <p>
-              I use TailWind Css to quickly give my front-end UI a unique styling.
-            </p>
-          </figcaption>
-        </figure>
+          <section className="border-2 border-yellow-400 flex-none w-full min-w-0">
+            <h2>Skills</h2>
+            <h3>Frontend</h3>
+            <ul>
+              <li>TypeScript</li>
+              <li>Next.js</li>
+              <li>React.js</li>
+              <li>Tailwind CSS</li>
+            </ul>
+            <h3>Backend</h3>
+            <ul>
+              <li>Express.js</li>
+              <li>Flask</li>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>RESTful APIs</li>
+            </ul>
+          </section>
+
+          <section className="border-4 border-blue-800 w-full flex-none min-w-0">
+            <h2>Tools</h2>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Netlify</li>
+              <li>Vercel</li>
+              <li>VS Code</li>
+              <li>Copilot</li>
+              <li>WebStorm</li>
+              <li>CodeSandbox</li>
+              <li>Postman</li>
+            </ul>
+          </section>
+        </div>
       </div>
+
     </div>
-  );
+  ) : <div className="min-h-screen bg-[#497D74] bg-[url('https://www.transparenttextures.com/patterns/diagonales-decalees.png')]">
+
+  <h2 className="py-5 font-medium text-center"> Tech Stack & Tools </h2>
+
+  <div className="flex flex-col lg:flex-row justify-around" >
+    
+
+      <section className="border-2 border-yellow-400 ">
+        <h2>Skills</h2>
+        <h3>Frontend</h3>
+        <ul>
+          <li>TypeScript</li>
+          <li>Next.js</li>
+          <li>React.js</li>
+          <li>Tailwind CSS</li>
+        </ul>
+        <h3>Backend</h3>
+        <ul>
+          <li>Express.js</li>
+          <li>Flask</li>
+          <li>PostgreSQL</li>
+          <li>MongoDB</li>
+          <li>RESTful APIs</li>
+        </ul>
+      </section>
+
+      <section className="border-4 border-blue-800">
+        <h2>Tools</h2>
+        <ul>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>Netlify</li>
+          <li>Vercel</li>
+          <li>VS Code</li>
+          <li>Copilot</li>
+          <li>WebStorm</li>
+          <li>CodeSandbox</li>
+          <li>Postman</li>
+        </ul>
+      </section>
+    </div>
+
+</div>
+  
 };
 
 export default Stack;
