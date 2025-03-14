@@ -1,6 +1,7 @@
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useMediaQuery } from "react-responsive"; //to conditional render the Carousel for mobile screens only
+import { MdOutlineSwipeVertical } from "react-icons/md";
 import FrontendStack from "./FrontendStack"
 import BackendStack from "./BackendStack"
 import TechTools from "./TechTools";
@@ -23,20 +24,22 @@ const Stack = () => {
   const isMobileScreen = useMediaQuery({ maxWidth: 425 })
 
   return isMobileScreen ? (
-    <div className="min-h-screen bg-[#497D74] bg-[url('https://www.transparenttextures.com/patterns/diagonales-decalees.png')]">
+    <div className="min-h-screen bg-[#497D74] bg-[url('https://www.transparenttextures.com/patterns/diagonales-decalees.png')] flex flex-col justify-center items-center">
 
       <h2 className="py-5 font-medium text-center"> Tech Stack & Tools </h2>
 
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="overflow-hidden flex flex-col justify-center items-center" ref={emblaRef}>
         <div className="flex">
 
           <section className="flex-none w-full min-w-0 p-5">
-            <h2>Skills</h2>
-            <h3>Frontend</h3>
-            <FrontendStack />
 
-            <h3>Backend</h3>
+            <div className="flex flex-col gap-5">
+            <h2 className="text-center">Frontend</h2>
+            <FrontendStack/>
+
+            <h2 className="text-center">Backend</h2>
             <BackendStack />
+            </div>
           </section>
 
           <section className="w-full flex-none min-w-0 p-5">
@@ -44,17 +47,21 @@ const Stack = () => {
             <TechTools />
           </section>
         </div>
+      <div className="flex flex-col items-center">
+      <MdOutlineSwipeVertical className="w-16 h-16" />
+      <p>Swipe</p>
       </div>
+      </div>      
 
     </div>
-  ) : <div className="min-h-screen bg-[#497D74] bg-[url('https://www.transparenttextures.com/patterns/diagonales-decalees.png')]">
+  ) : <div className="min-h-screen bg-[#497D74] bg-[url('https://www.transparenttextures.com/patterns/diagonales-decalees.png')] flex flex-col justify-center ">
 
-    <h2 className="py-5 font-medium text-center"> Tech Stack & Tools </h2>
+    <h2 className="font-medium text-center "> Tech Stack & Tools </h2>
 
     <div className="flex flex-col lg:flex-row justify-around" >
 
 
-      <section className="border shadow-lg p-5 ">
+      <section className="shadow-lg p-5 ">
         <h2>Skills</h2>
         <h3>Frontend</h3>
         <FrontendStack />
@@ -63,7 +70,7 @@ const Stack = () => {
         <BackendStack />
       </section>
 
-      <section className="border shadow-lg p-5">
+      <section className="shadow-lg p-5">
         <h2>Tools</h2>
         <TechTools />
       </section>

@@ -17,7 +17,7 @@ const FrontendStack = () => {
 
 
       return (
-       <div className="grid grid-cols-2 gap-3">
+       <div className="grid grid-cols-2 gap-3 shadow-xl ">
     {technologies.map((tech, index) => (
       <div key={index} className="flex items-center space-x-2 shadow-md p-1 my-2 bg-gray-600 text-white">
         <img src={tech.icon} alt={tech.title} className="w-8 h-8" />

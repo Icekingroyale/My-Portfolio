@@ -20,7 +20,7 @@ const BackendStack = () => {
 
 
     return (
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-3 shadow-lg">
             {technologies.map((tech, index) => (
                 <div key={index} className="flex items-center space-x-2 shadow-md bg-gray-600 text-white p-1 my-2">
                     <img src={tech.icon} alt={tech.title} className="w-8 h-8" />
