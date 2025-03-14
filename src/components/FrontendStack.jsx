@@ -12,15 +12,14 @@ const FrontendStack = () => {
         { icon: next, title: "Next.js" },
         { icon: react, title: "React.js" },
         { icon: tailwind, title: "Tailwind" },
-        { icon: wordpress, title: "WordPress" }
       ];
 
 
 
       return (
-       <div className="grid grid-cols-3 gap-2">
+       <div className="grid grid-cols-2 gap-3">
     {technologies.map((tech, index) => (
-      <div key={index} className="flex items-center space-x-2 rounded-lg shadow-md p-1 my-2 bg-gray-600 text-white">
+      <div key={index} className="flex items-center space-x-2 shadow-md p-1 my-2 bg-gray-600 text-white">
         <img src={tech.icon} alt={tech.title} className="w-8 h-8" />
         <span>{tech.title}</span>
       </div>
