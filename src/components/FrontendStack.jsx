@@ -1,5 +1,5 @@
 import React from 'react'
-import tailwind from '../assets/techstack/tailwind.svg'
+import tailwind from '../assets/techstack/Tailwind.svg'
 import react from '../assets/techstack/react.svg'
 import typescript from '../assets/techstack/typescript.svg'
 import next from '../assets/techstack/Next.svg'
