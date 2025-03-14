@@ -1,9 +1,9 @@
 import React from 'react'
 import tailwind from '../assets/techstack/Tailwind.svg'
-import react from '../assets/techstack/react.svg'
-import typescript from '../assets/techstack/typescript.svg'
+import react from '../assets/techstack/React.svg'
+import typescript from '../assets/techstack/Typescript.svg'
 import next from '../assets/techstack/Next.svg'
-import wordpress from '../assets/techstack/wordpress.svg'
+import wordpress from '../assets/techstack/Wordpress.svg'
 
 const FrontendStack = () => {
 
