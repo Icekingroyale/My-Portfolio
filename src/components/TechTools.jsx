@@ -1,6 +1,6 @@
 import React from 'react'
 import Git from '../assets/techtool/Git.svg'
-import GitHub from '../assets/GitHub.svg'
+import GitHub from '../assets/techtool/GitHub.svg'
 import Postman from '../assets/techtool/Postman.svg'
 import Vercel from '../assets/techtool/Vercel.svg'
 import WebStorm from '../assets/techtool/WebStorm.svg'
