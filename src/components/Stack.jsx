@@ -31,7 +31,7 @@ const Stack = () => {
       <div className="overflow-hidden flex flex-col justify-center items-center" ref={emblaRef}>
         <div className="flex">
 
-          <section className="flex-none w-full min-w-0 p-5">
+          <section className="flex-none w-full min-w-0 shadow-2xl p-5">
 
             <div className="flex flex-col gap-5">
             <h2 className="text-center">Frontend</h2>
@@ -42,8 +42,8 @@ const Stack = () => {
             </div>
           </section>
 
-          <section className="w-full flex-none min-w-0 p-5">
-            <h2>Tools</h2>
+          <section className="w-full flex-none min-w-0 p-5 shadow-2xl ">
+            <h2 className="text-center">Tools</h2>
             <TechTools />
           </section>
         </div>
@@ -61,17 +61,16 @@ const Stack = () => {
     <div className="flex flex-col lg:flex-row justify-around" >
 
 
-      <section className="shadow-lg p-5 ">
-        <h2>Skills</h2>
-        <h3>Frontend</h3>
+      <section className="shadow-2xl p-5 ">
+        <h2 className="text-center">Frontend</h2>
         <FrontendStack />
         
-        <h3>Backend</h3>
+        <h2 className="text-center">Backend</h2>
         <BackendStack />
       </section>
 
-      <section className="shadow-lg p-5">
-        <h2>Tools</h2>
+      <section className="shadow-2xl p-5">
+        <h2 className="text-center">Tools</h2>
         <TechTools />
       </section>
     </div>

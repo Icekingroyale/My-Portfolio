@@ -19,13 +19,13 @@ const TechTools = () => {
          { icon: WebStorm, title: "WebStorm" },
          { icon: wordpress, title: "Wordpress" },
          { icon: Shopify, title: "Shopify" },
+         { icon: Git, title: "Git" },
+         { icon: GitHub, title: "GitHub" },
+         { icon: Vercel, title: "Vercel" },
+         { icon: Netlify, title: "Netlify" },
+         { icon: Postman, title: "Postman" },
          { icon: FramerMotion, title: "Framer Motion" },
          { icon: MaterialUi, title: "MaterialUi" },
-            { icon: Git, title: "Git" },
-            { icon: GitHub, title: "GitHub" },
-            { icon: Vercel, title: "Vercel" },
-            { icon: Netlify, title: "Netlify" },
-            { icon: Postman, title: "Postman" },
             { icon: copilot, title: "GitHub Copilot" },
           ];
 
@@ -34,8 +34,8 @@ const TechTools = () => {
   return (
     <div className="grid grid-cols-2 gap-3 ">
     {tools.map((tech, index) => (
-        <div key={index} className="flex items-center space-x-2 shadow-md bg-gray-600 text-white p-1 my-2">
-            <img src={tech.icon} alt={tech.title} className="w-8 h-8" />
+        <div key={index} className="flex items-center space-x-2 bg-gray-600 text-white p-1 my-2">
+            <img src={tech.icon} alt={tech.title} className="w-6 h-6" />
             <span>{tech.title}</span>
         </div>
     ))}
