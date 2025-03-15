@@ -14,7 +14,7 @@ const Projects = () => {
   return (
     <div className="bg-[#71BBB2] bg-[url('https://www.transparenttextures.com/patterns/crossword z.png')] min-h-screen text-center place-content-center place-items-center">
       <h2 className="py-5 mb-5">Recent Projects</h2>
-      <div className="grid justify-center grid-cols-1 lg:grid-cols-2 gap-8 md:gap-24 lg:my-10 mb-14 border">
+      <div className="grid justify-center grid-cols-1 lg:grid-cols-2 gap-8 md:gap-24 lg:my-10 mb-14">
         <a
           href="https://fortune-block.netlify.app/"
           target="_blank"
