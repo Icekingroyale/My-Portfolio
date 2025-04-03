@@ -9,7 +9,8 @@ import { useMediaQuery } from "react-responsive"; //to conditional render the Fu
 import Fullpage, { FullpageSection, FullPageSections, FullpageNavigation } from "@ap.cx/react-fullpage";
 
 
-
+// 15-02-2025
+// TODO - Add fade in animations on scroll
 
 const Mainpage = () => {
 

@@ -21,7 +21,7 @@ const Stack = () => {
 
   const [emblaRef] = useEmblaCarousel();
 
-  const isMobileScreen = useMediaQuery({ maxWidth: 425 })
+  const isMobileScreen = useMediaQuery({ maxWidth: 428 })
 
   return isMobileScreen ? (
     <div className="min-h-screen bg-[#497D74] bg-[url('https://www.transparenttextures.com/patterns/diagonales-decalees.png')] flex flex-col justify-center items-center">
@@ -42,7 +42,7 @@ const Stack = () => {
             </div>
           </section>
 
-          <section className="w-full flex-none min-w-0 p-5 shadow-2xl ">
+          <section className="w-full flex-none min-w-0 p-5 shadow-2xl">
             <h2 className="text-center">Tools</h2>
             <TechTools />
           </section>
@@ -58,10 +58,10 @@ const Stack = () => {
 
     <h2 className="font-medium text-center "> Tech Stack & Tools </h2>
 
-    <div className="flex flex-col lg:flex-row justify-around" >
+    <div className="flex flex-col lg:flex-row justify-around w-[70%] mx-auto" >
 
 
-      <section className="shadow-2xl p-5 ">
+      <section className="shadow-2xl p-5">
         <h2 className="text-center">Frontend</h2>
         <FrontendStack />
         

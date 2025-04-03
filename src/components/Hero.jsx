@@ -19,7 +19,8 @@ const Hero = () => {
   return (
     <section className="bg-[#EFE9D5] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')] flex flex-col md:flex-row gap-6 lg:gap-20 items-center min-h-screen w-full justify-center md:p-10 py-20">
       <article className="text-center md:text-left">
-        <h1 className="text-red-600">Hi I'm Chimaobi</h1>
+        <h1 className="text-blue-600">Hi I'm Chimaobi</h1>
+        <h2 className="text-3xl md:text-5xl font-bold mt-3 text-red-600">Site Under Construction</h2>
         <h2 className="mt-3 max-w-96">
           Lorem ipsum dolor sit amet <strong onMouseOver={handleMouseOver} className="text-blue-600 lg:hover:underline">HOVER</strong> consectetur adipisicing elit. Dolorem neque impedit facere aspernatur <strong onMouseOver={handleMouseOver} className="text-blue-600 lg:hover:underline">HOVER</strong> libero quo minus eveniet tempora porro, fugit quod.
         </h2>
