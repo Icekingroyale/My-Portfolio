@@ -58,19 +58,19 @@ const Stack = () => {
 
     <h2 className="font-medium text-center "> Tech Stack & Tools </h2>
 
-    <div className="flex flex-col lg:flex-row justify-around w-[70%] mx-auto" >
+    <div className="flex flex-col lg:flex-row justify-around w-[80%] mx-auto" >
 
 
-      <section className="shadow-2xl p-5">
-        <h2 className="text-center">Frontend</h2>
+      <section className="shadow-2xl p-5 lg:w-[40%]">
+        <h2 className="">Frontend</h2>
         <FrontendStack />
         
-        <h2 className="text-center">Backend</h2>
+        <h2 className="">Backend</h2>
         <BackendStack />
       </section>
 
-      <section className="shadow-2xl p-5">
-        <h2 className="text-center">Tools</h2>
+      <section className="shadow-2xl p-5 lg:w-[40%] lg:mt-0 md:mt-5">
+        <h2 className="">Tools</h2>
         <TechTools />
       </section>
     </div>

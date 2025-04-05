@@ -14,15 +14,19 @@ import Fullpage, { FullpageSection, FullPageSections, FullpageNavigation } from 
 
 const Mainpage = () => {
 
-  const isLargeScreen = useMediaQuery({minWidth: 1024})
+  const isLargeScreen = useMediaQuery({ minWidth: 1024 })
 
   return isLargeScreen ? (
 
     <Fullpage >
-      <FullpageNavigation  /> {/* adds the navigation clicks on the side of the large screen */}
 
-        <FullPageSections>
+
+      {/* adds the navigation clicks on the side of the large screen */}
+
+      <FullpageNavigation />
+      <FullPageSections>
         <FullpageSection>
+
           <Header />
           <Hero />
 
@@ -47,8 +51,8 @@ const Mainpage = () => {
     </Fullpage>
 
   ) : <>
-  <Header/>
-    <Hero/>
+    <Header />
+    <Hero />
     <Projects />
     <Stack />
     <HomepageContact />

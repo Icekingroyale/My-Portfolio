@@ -15,8 +15,8 @@ import X from "../assets/x.svg";
 const LgMenuDrop = () => {
   return (
     <>
-      <div className='bg-gray-600 w-60 absolute top-0 right-0 z-10 hidden md:flex md:flex-col items-center py-10 gap-20 border'>
-        <a href="https://www.linkedin.com/in/chimaobi-okeh" target="_blank">
+      <div className='bg-gray-600 w-60 absolute top-0 right-0 z-10 hidden md:flex md:flex-col items-center py-10 gap-20'>
+        <a href="https://www.linkedin.com/in/chimaobiokeh" target="_blank">
           <img src={linkedin} alt="linkedin logo" className="h-10 invert" />
         </a>
         <a href="https://github.com/Icekingroyale" target="_blank">

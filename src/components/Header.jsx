@@ -32,8 +32,11 @@ const Header = () => {
     //12-02-25
     // TODO - Resolve the FullPageNav and LgMenuDropDown conflex
 
+    //05-04-2-25
+    // TODO - make the LgMenuDropDown disappers on arrow+down keypress & onClick anywhere on the hero and header
+
     let header = <>
-        <header className='fixed bg-transparent w-full flex justify-between bg-[#EFE9D5] z-[1000] border'>
+        <header className='fixed bg-transparent w-full flex justify-between bg-[#EFE9D5] z-[1000]'>
 
             <NavLink to="/">
                 <img src={Logo} alt="site logo" className="h-14" />
@@ -46,7 +49,7 @@ const Header = () => {
                 <MenuLinks />
             </div>
 
-            <button className="h-14 z-[1000] absolute right-0 border">
+            <button className="h-14 z-[1000] absolute right-0">
                 <Hamburger toggled={isToggled} toggle={handleToggle} />
             </button>
 

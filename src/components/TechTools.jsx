@@ -34,7 +34,7 @@ const TechTools = () => {
   return (
     <div className="grid grid-cols-2 gap-3">
     {tools.map((tech, index) => (
-        <div key={index} className="flex items-center space-x-2 bg-gray-600 text-white p-1 my-2 w-44">
+        <div key={index} className="flex items-center space-x-2 bg-gray-600 text-white p-1 my-2 sm:w-44 ">
             <img src={tech.icon} alt={tech.title} className="w-6 h-6" />
             <span>{tech.title}</span>
         </div>

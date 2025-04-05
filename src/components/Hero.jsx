@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import hero from "../assets/Hero.jpeg";
 
+
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false)
 
   const handleMouseOver = () => {
-    // setIsHovered(!isHovered)
+    // set the hover animation logic here
     console.log('Mouse hovered')
   }
 
