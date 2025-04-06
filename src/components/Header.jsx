@@ -53,7 +53,7 @@ const Header = () => {
                 <Hamburger toggled={isToggled} toggle={handleToggle} />
             </button>
 
-            <div className={`${isToggled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
+            <div className={`${isToggled ? 'block translate-y-0' : 'hidden -translate-y-full'
                 } transition-all duration-500 ease-in-out transform`}>
                 <LgMenuDrop />
             </div>

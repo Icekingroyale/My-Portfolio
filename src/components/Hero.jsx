@@ -5,7 +5,7 @@ import {
   popupInitial,
   popupAnimate,
   popupExit,
-} from "./animations/Hero.js"
+} from "./animations/Hero"
 
 const Hero = () => {
   const [isHoveredOne, setIsHoveredOne] = useState(false)
@@ -48,7 +48,7 @@ const Hero = () => {
               initial={popupInitial}
               animate={popupAnimate(isTapped)}
               exit={popupExit}
-              className="absolute top-40 left-10 bg-red-600 border p-3 rounded shadow-lg h-40 w-1/3 text-white"
+              className="absolute top-10 left-10 bg-red-600 border p-3 rounded shadow-lg h-40 w-1/3 text-white"
             >
               <p>🛠 I build cool things</p>
             </motion.div>
@@ -81,7 +81,7 @@ const Hero = () => {
               initial={popupInitial}
               animate={popupAnimate(isTapped)}
               exit={popupExit}
-              className="absolute top-40 left-10 bg-blue-600 border p-3 rounded shadow-lg h-40 w-1/3 text-white"
+              className="absolute top-10 right-10 bg-blue-600 border p-3 rounded shadow-lg h-40 w-1/3 text-white"
             ><p>🛠 I build cool stuffs</p>
                   </motion.div>
                 <motion.div
@@ -89,7 +89,7 @@ const Hero = () => {
               initial={popupInitial}
               animate={popupAnimate(isTapped)}
               exit={popupExit}
-              className="absolute bottom-40 right-10 lg:top-96 bg-green-600 border p-3 rounded shadow-lg h-40 w-1/3 text-white"
+              className="absolute bottom-10 left-10 lg:top-96 bg-green-600 border p-3 rounded shadow-lg h-40 w-1/3 text-white"
             ><p>🛠 And maintain them</p>
                   </motion.div>
 

@@ -14,7 +14,7 @@ import Fullpage, { FullpageSection, FullPageSections, FullpageNavigation } from 
 
 
 
-const Mainpage = () => {
+const Homepage = () => {
 
   const isLargeScreen = useMediaQuery({ minWidth: 1024 })
 
@@ -62,4 +62,4 @@ const Mainpage = () => {
   </>
 }
 
-export default Mainpage
+export default Homepage
