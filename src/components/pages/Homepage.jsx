@@ -53,18 +53,12 @@ const Homepage = () => {
     </Fullpage>
 
   ) : <>
-  <div className="min-h-screen flex flex-col bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')] ">
-
     <Header  />
     <Hero />
-  </div>
     <Projects />
     <Stack />
     <HomepageContact />
-    <div className="flex flex-col flex-grow px-4 pt-safe pb-safe" >
-
     <Footer />
-    </div>
   </>
 }
 

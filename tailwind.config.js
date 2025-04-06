@@ -12,10 +12,6 @@ export default {
                 secondary: 'var(--secondary)',
                 'secondary-light': 'var(--secondary-light)',
             },
-            padding:{
-                'safe': 'env(safe-area-inset-top)', // for top safe area
-                'safe-bottom': 'env(safe-area-inset-bottom)', // for bottom safe area
-            }
         },
     },
 
