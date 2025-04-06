@@ -12,6 +12,8 @@ import Fullpage, { FullpageSection, FullPageSections, FullpageNavigation } from 
 // 15-02-2025
 // TODO - Add fade in animations on scroll
 
+
+
 const Mainpage = () => {
 
   const isLargeScreen = useMediaQuery({ minWidth: 1024 })

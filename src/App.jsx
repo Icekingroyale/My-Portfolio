@@ -5,6 +5,11 @@ import About from "./components/navlinks/About";
 import Resume from "./components/navlinks/Resume";
 import Contact from "./components/navlinks/Contact";
 
+
+
+//05-04-2025
+// tODO - Remove the default drap animation when you scroll to the start and end of the pages in mobile screen
+
 const App = () => {
   return (
     <div className='overflow-hidden'>
