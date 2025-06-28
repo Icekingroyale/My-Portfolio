@@ -5,6 +5,10 @@ export const popupInitial = { opacity: 0, y: -10 };
 
 export const popupExit = { opacity: 0, y: -10 };
 
+// export const initialAnimate 
+// export const afterAnimate
+// use the 
+
 // Dynamic animate config that adds "tap" effect
 export const popupAnimate = (isTapped) => ({
   opacity: 1,
