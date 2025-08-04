@@ -4,6 +4,7 @@ import { ScrollAnimation } from "./animations/ScrollAnimation";
 
 const Contact = (isLargeScreen) => {
   return (
+    <div id="contact">
     <ScrollAnimation isLargeScreen={isLargeScreen}>
       <div className="min-h-screen bg-green-700 bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')] flex flex-col items-center justify-center gap-10">
 
@@ -20,6 +21,7 @@ const Contact = (isLargeScreen) => {
 
       </div>
     </ScrollAnimation>
+    </div> 
   )
 }
 

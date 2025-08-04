@@ -58,13 +58,6 @@ const Header = () => {
                 <LgMenuDrop />
             </div>
 
-
-            {/* <div className={`${isToggled ? 'block' : 'hidden'}`}>
-                My code 02-02-2025
-                <LgMenuDrop />
-            </div> */}
-
-
         </header>
     </>;
     return header;

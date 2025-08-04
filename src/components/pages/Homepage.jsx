@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../Header'
 import Hero from '../Hero'
 import Projects from '../Projects'
@@ -41,7 +41,7 @@ const Homepage = () => {
           <Stack />
 
         </FullpageSection>
-        <FullpageSection>
+        <FullpageSection data-anchor="contact">
           <HomepageContact />
 
         </FullpageSection>
@@ -58,7 +58,7 @@ const Homepage = () => {
     <Projects />
     <Stack />
     <HomepageContact />
-    <Footer />
+    <Footer />    
   </>
 }
 
