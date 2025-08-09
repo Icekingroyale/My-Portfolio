@@ -61,8 +61,8 @@ const NavigationLinks = () => {
                 </NavLink>
             </nav>
             <NavLink 
-                to="/contact"
-                className="px-2 bg-green-500 border-2 border-gray-600 rounded-md hover:bg-green-800 hover:text-white h-10 flex items-center"
+                to="/"
+                className="px-2 bg-green-500 border-2 border-gray-600 rounded-md hover:bg-green-800 hover:text-white h-10 flex items-center transition-colors duration-300"
             >
                 Contact Me
             </NavLink>

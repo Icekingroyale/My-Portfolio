@@ -9,10 +9,8 @@ const MenuLinks = ({ onLinkClick }) => {
                 <NavLink to='/' onClick={onLinkClick}>Home</NavLink>
 
                 <NavLink to="/about" onClick={onLinkClick}><li>About</li> </NavLink>
-                <a to="https://medium.com/@okehchimaobi" target="_blank">
-                    <li>Articles</li></a>
-
-                <a href="./myResume.pdf" download="myResume.pdf" draggable='true'><li>Resume</li></a>
+                
+                <NavLink to="/resume" onClick={onLinkClick} draggable='true'><li>Resume</li></NavLink>
             </ul>
 
             <div className='flex text-2xl font-semibold'>

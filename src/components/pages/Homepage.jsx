@@ -41,7 +41,7 @@ const Homepage = () => {
           <Stack />
 
         </FullpageSection>
-        <FullpageSection data-anchor="contact">
+        <FullpageSection>
           <HomepageContact />
 
         </FullpageSection>
@@ -52,14 +52,49 @@ const Homepage = () => {
       </FullPageSections>
     </Fullpage>
 
-  ) : <>
-    <Header  />
-    <Hero />
-    <Projects />
-    <Stack />
-    <HomepageContact />
-    <Footer />    
-  </>
+  ) 
+  :
+
+  <Fullpage >
+
+
+  {/* adds the navigation clicks on the side of the large screen */}
+
+  {/* <FullpageNavigation /> */}
+  <FullPageSections>
+    <FullpageSection>
+
+      <Header />
+      <Hero />
+
+    </FullpageSection>
+    <FullpageSection>
+      <Projects />
+
+    </FullpageSection>
+    <FullpageSection>
+      <Stack />
+
+    </FullpageSection>
+    <FullpageSection>
+      <HomepageContact />
+
+    </FullpageSection>
+    <FullpageSection>
+      <Footer />
+
+    </FullpageSection>
+  </FullPageSections>
+</Fullpage>
+
+  //  <>
+  //   <Header  />
+  //   <Hero />
+  //   <Projects />
+  //   <Stack />
+  //   <HomepageContact />
+  //   <Footer />    
+  // </>
 }
 
 export default Homepage
