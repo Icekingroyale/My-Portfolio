@@ -26,8 +26,9 @@ const SwiperMobileFullpage = ({ sections, onSectionChange }) => {
         slidesPerView={1}
         spaceBetween={0}
         mousewheel={{
-          sensitivity: 1,
+          sensitivity: 0.5, // Reduced for better nested scroll detection
           releaseOnEdges: true,
+          forceToAxis: true,
         }}
         keyboard={{
           enabled: true,
@@ -39,18 +40,51 @@ const SwiperMobileFullpage = ({ sections, onSectionChange }) => {
         }}
         speed={800} // Animation speed
         allowTouchMove={true}
-        threshold={50} // Minimum swipe distance for deliberate gesture
-        longSwipesRatio={0.4} // Requires 40% of slide to trigger change
+        threshold={80} // Increased threshold - need more deliberate swipe to change sections
+        longSwipesRatio={0.5} // Requires 50% of slide to trigger change
+        touchRatio={0.8} // Slightly reduce touch sensitivity
+        followFinger={true}
+        shortSwipes={false} // Disable short swipes - only long deliberate ones work
+        longSwipes={true}
+        nested={true} // Enable nested scrolling
+        simulateTouch={true}
         onSlideChange={(swiper) => {
           onSectionChange?.(swiper.activeIndex);
         }}
-        loop={true} // Infinite loop like you wanted
+        onTouchStart={(swiper, event) => {
+          // Store initial touch position for nested scroll detection
+          swiper.initialTouchY = event.touches[0].clientY;
+        }}
+        onTouchMove={(swiper, event) => {
+          const currentY = event.touches[0].clientY;
+          const deltaY = swiper.initialTouchY - currentY;
+          const slideEl = swiper.slides[swiper.activeIndex];
+          
+          // Check if content within slide can scroll
+          if (slideEl) {
+            const scrollableEl = slideEl.querySelector('.scrollable-content');
+            if (scrollableEl) {
+              const canScrollDown = scrollableEl.scrollTop < (scrollableEl.scrollHeight - scrollableEl.offsetHeight);
+              const canScrollUp = scrollableEl.scrollTop > 0;
+              
+              // If trying to scroll down and content can scroll down, don't trigger swiper
+              if (deltaY > 0 && canScrollDown) {
+                return;
+              }
+              // If trying to scroll up and content can scroll up, don't trigger swiper
+              if (deltaY < 0 && canScrollUp) {
+                return;
+              }
+            }
+          }
+        }}
+        loop={true} // Infinite loop
         modules={[Mousewheel, Keyboard, Pagination]}
         className="h-full w-full swiper-mobile-fullpage"
       >
         {sections.map((SectionComponent, index) => (
-          <SwiperSlide key={index} className="flex items-start justify-center">
-            <div className="w-full h-full overflow-y-auto">
+          <SwiperSlide key={index} className="flex items-start justify-start">
+            <div className="scrollable-content w-full h-full overflow-y-auto overflow-x-hidden">
               {SectionComponent}
             </div>
           </SwiperSlide>
@@ -90,14 +124,34 @@ const SwiperMobileFullpage = ({ sections, onSectionChange }) => {
           transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
         }
 
-        /* Hide scrollbars but allow scrolling within sections if needed */
-        .swiper-mobile-fullpage .swiper-slide::-webkit-scrollbar {
-          display: none;
+        /* Hide scrollbars but allow scrolling within sections */
+        .swiper-mobile-fullpage .scrollable-content::-webkit-scrollbar {
+          width: 2px;
         }
         
-        .swiper-mobile-fullpage .swiper-slide {
+        .swiper-mobile-fullpage .scrollable-content::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        
+        .swiper-mobile-fullpage .scrollable-content::-webkit-scrollbar-thumb {
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 1px;
+        }
+        
+        .swiper-mobile-fullpage .scrollable-content {
           -ms-overflow-style: none;
-          scrollbar-width: none;
+          scrollbar-width: thin;
+          scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+        }
+
+        /* Smooth scroll behavior within sections */
+        .swiper-mobile-fullpage .scrollable-content {
+          scroll-behavior: smooth;
+        }
+
+        /* Prevent bounce effect on iOS */
+        .swiper-mobile-fullpage .scrollable-content {
+          -webkit-overflow-scrolling: touch;
         }
       `}</style>
     </div>

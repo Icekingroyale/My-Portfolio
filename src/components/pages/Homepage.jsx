@@ -80,37 +80,38 @@ import Fullpage, { FullpageSection, FullPageSections, FullpageNavigation } from 
 import SwiperMobileFullpage from '../animations/SwiperMobileFullpage'; // Import the Swiper component
 
 const Homepage = () => {
-  // Updated breakpoint to include tablets in desktop experience
-  const isDesktop = useMediaQuery({ minWidth: 768 })
+  // Multiple breakpoints for different screen sizes
+  const isDesktop = useMediaQuery({ minWidth: 768 }) // Desktop & Tablet
+  const isTinyScreen = useMediaQuery({ maxWidth: 568 }) // iPhone 5/5S and smaller
   const [currentMobileSection, setCurrentMobileSection] = useState(0);
 
-  // Define your mobile sections with your actual components
+  // Define your mobile sections with better height handling
   const mobileSections = [
     // Section 1: Header + Hero
-    <div key="hero-section" className="flex flex-col h-full min-h-screen">
+    <div key="hero-section" className="flex flex-col min-h-screen">
       <Header />
-      <div className="flex-1">
+      <div className="flex-1 min-h-0">
         <Hero />
       </div>
     </div>,
     
-    // Section 2: Projects
-    <div key="projects-section" className="h-full min-h-screen">
+    // Section 2: Projects (can be taller than screen)
+    <div key="projects-section" className="min-h-screen py-4">
       <Projects />
     </div>,
     
-    // Section 3: Stack
-    <div key="stack-section" className="h-full min-h-screen">
+    // Section 3: Stack (can be taller than screen)
+    <div key="stack-section" className="min-h-screen py-4">
       <Stack />
     </div>,
     
-    // Section 4: Contact
-    <div key="contact-section" className="h-full min-h-screen">
+    // Section 4: Contact (can be taller than screen)
+    <div key="contact-section" className="min-h-screen py-4">
       <HomepageContact />
     </div>,
     
-    // Section 5: Footer
-    <div key="footer-section" className="h-full min-h-screen">
+    // Section 5: Footer (can be taller than screen)
+    <div key="footer-section" className="min-h-screen py-4">
       <Footer />
     </div>
   ];
@@ -121,7 +122,7 @@ const Homepage = () => {
   };
 
   return isDesktop ? (
-    // Desktop & Tablet Experience (unchanged)
+    // Desktop & Tablet Experience (768px+)
     <Fullpage>
       <FullpageNavigation />
       <FullPageSections>
@@ -143,8 +144,18 @@ const Homepage = () => {
         </FullpageSection>
       </FullPageSections>
     </Fullpage>
+  ) : isTinyScreen ? (
+    // Tiny Screens Fallback (568px and below) - iPhone 5/5S and smaller
+    <div className="w-full">
+      <Header />
+      <Hero />
+      <Projects />
+      <Stack />
+      <HomepageContact />
+      <Footer />
+    </div>
   ) : (
-    // Mobile Experience - Using Swiper
+    // Medium Mobile Experience (569px - 767px) - iPhone 6+ and similar
     <SwiperMobileFullpage 
       sections={mobileSections} 
       onSectionChange={handleMobileSectionChange}
