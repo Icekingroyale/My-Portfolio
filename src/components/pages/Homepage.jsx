@@ -68,7 +68,6 @@
 
 // export default Homepage
 
-
 import React, { useEffect, useState } from 'react'
 import Header from '../Header'
 import Hero from '../Hero'
@@ -78,17 +77,17 @@ import HomepageContact from '../HomepageContact'
 import Footer from '../Footer'
 import { useMediaQuery } from "react-responsive";
 import Fullpage, { FullpageSection, FullPageSections, FullpageNavigation } from "@ap.cx/react-fullpage";
-import MobileFullpage from '../animations/MobileFullpage'; // You'll create this file
+import SwiperMobileFullpage from '../animations/SwiperMobileFullpage'; // Import the Swiper component
 
 const Homepage = () => {
   // Updated breakpoint to include tablets in desktop experience
   const isDesktop = useMediaQuery({ minWidth: 768 })
   const [currentMobileSection, setCurrentMobileSection] = useState(0);
 
-  // Define your mobile sections - these are your actual components!
+  // Define your mobile sections with your actual components
   const mobileSections = [
-    // Section 1: Header + Hero combined
-    <div key="hero-section" className="flex flex-col h-full">
+    // Section 1: Header + Hero
+    <div key="hero-section" className="flex flex-col h-full min-h-screen">
       <Header />
       <div className="flex-1">
         <Hero />
@@ -96,47 +95,30 @@ const Homepage = () => {
     </div>,
     
     // Section 2: Projects
-    <div key="projects-section" className="h-full">
+    <div key="projects-section" className="h-full min-h-screen">
       <Projects />
     </div>,
     
     // Section 3: Stack
-    <div key="stack-section" className="h-full">
+    <div key="stack-section" className="h-full min-h-screen">
       <Stack />
     </div>,
     
     // Section 4: Contact
-    <div key="contact-section" className="h-full">
+    <div key="contact-section" className="h-full min-h-screen">
       <HomepageContact />
     </div>,
     
     // Section 5: Footer
-    <div key="footer-section" className="h-full">
+    <div key="footer-section" className="h-full min-h-screen">
       <Footer />
     </div>
   ];
 
   const handleMobileSectionChange = (sectionIndex) => {
     setCurrentMobileSection(sectionIndex);
-    // Optional: You can add analytics or other tracking here
     console.log(`Current mobile section: ${sectionIndex}`);
   };
-
-  // Prevent body scroll when on mobile
-  useEffect(() => {
-    if (!isDesktop) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.height = '100vh';
-    } else {
-      document.body.style.overflow = '';
-      document.body.style.height = '';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-      document.body.style.height = '';
-    };
-  }, [isDesktop]);
 
   return isDesktop ? (
     // Desktop & Tablet Experience (unchanged)
@@ -162,11 +144,10 @@ const Homepage = () => {
       </FullPageSections>
     </Fullpage>
   ) : (
-    // Mobile Experience - Your components inside MobileFullpage
-    <MobileFullpage 
+    // Mobile Experience - Using Swiper
+    <SwiperMobileFullpage 
       sections={mobileSections} 
       onSectionChange={handleMobileSectionChange}
-      currentSection={currentMobileSection}
     />
   );
 };
