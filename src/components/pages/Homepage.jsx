@@ -69,31 +69,77 @@
 // export default Homepage
 
 
-
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../Header'
 import Hero from '../Hero'
 import Projects from '../Projects'
 import Stack from '../Stack'
 import HomepageContact from '../HomepageContact'
 import Footer from '../Footer'
-import { useMediaQuery } from "react-responsive"
-import Fullpage, { FullpageSection, FullPageSections, FullpageNavigation } from "@ap.cx/react-fullpage"
-import ReactFullpage from '@fullpage/react-fullpage'
-import { motion } from 'framer-motion'
-
-// Animation variants
-const fadeSlideUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-}
+import { useMediaQuery } from "react-responsive";
+import Fullpage, { FullpageSection, FullPageSections, FullpageNavigation } from "@ap.cx/react-fullpage";
+import MobileFullpage from '../animations/MobileFullpage'; // You'll create this file
 
 const Homepage = () => {
-  const isLargeScreen = useMediaQuery({ minWidth: 1024 })
-  const [activeSection, setActiveSection] = useState(0)
+  // Updated breakpoint to include tablets in desktop experience
+  const isDesktop = useMediaQuery({ minWidth: 768 })
+  const [currentMobileSection, setCurrentMobileSection] = useState(0);
 
-  return isLargeScreen ? (
-    // === DESKTOP FULLPAGE ===
+  // Define your mobile sections - these are your actual components!
+  const mobileSections = [
+    // Section 1: Header + Hero combined
+    <div key="hero-section" className="flex flex-col h-full">
+      <Header />
+      <div className="flex-1">
+        <Hero />
+      </div>
+    </div>,
+    
+    // Section 2: Projects
+    <div key="projects-section" className="h-full">
+      <Projects />
+    </div>,
+    
+    // Section 3: Stack
+    <div key="stack-section" className="h-full">
+      <Stack />
+    </div>,
+    
+    // Section 4: Contact
+    <div key="contact-section" className="h-full">
+      <HomepageContact />
+    </div>,
+    
+    // Section 5: Footer
+    <div key="footer-section" className="h-full">
+      <Footer />
+    </div>
+  ];
+
+  const handleMobileSectionChange = (sectionIndex) => {
+    setCurrentMobileSection(sectionIndex);
+    // Optional: You can add analytics or other tracking here
+    console.log(`Current mobile section: ${sectionIndex}`);
+  };
+
+  // Prevent body scroll when on mobile
+  useEffect(() => {
+    if (!isDesktop) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.height = '100vh';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.height = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.height = '';
+    };
+  }, [isDesktop]);
+
+  return isDesktop ? (
+    // Desktop & Tablet Experience (unchanged)
     <Fullpage>
       <FullpageNavigation />
       <FullPageSections>
@@ -116,74 +162,13 @@ const Homepage = () => {
       </FullPageSections>
     </Fullpage>
   ) : (
-    // === MOBILE FULLPAGE WITH ANIMATIONS ===
-    <ReactFullpage
-      scrollingSpeed={700}
-      navigation
-      controlArrows
-      autoScrolling={true}
-      fitToSection={true}
-      afterLoad={(origin, destination) => {
-        setActiveSection(destination.index) // Track the current section
-      }}
-      render={() => (
-        <ReactFullpage.Wrapper>
-          <div className="section">
-            <motion.div
-              initial="hidden"
-              animate={activeSection === 0 ? "visible" : "hidden"}
-              variants={fadeSlideUp}
-            >
-              <Header />
-              <Hero />
-            </motion.div>
-          </div>
-
-          <div className="section">
-            <motion.div
-              initial="hidden"
-              animate={activeSection === 1 ? "visible" : "hidden"}
-              variants={fadeSlideUp}
-            >
-              <Projects />
-            </motion.div>
-          </div>
-
-          {/* Horizontal swipe carousel */}
-          <div className="section">
-            <div className="slide">
-              <motion.div
-                initial="hidden"
-                animate={activeSection === 2 ? "visible" : "hidden"}
-                variants={fadeSlideUp}
-              >
-                <Stack />
-              </motion.div>
-            </div>
-            <div className="slide">
-              <motion.div
-                initial="hidden"
-                animate={activeSection === 2 ? "visible" : "hidden"}
-                variants={fadeSlideUp}
-              >
-                <HomepageContact />
-              </motion.div>
-            </div>
-          </div>
-
-          <div className="section">
-            <motion.div
-              initial="hidden"
-              animate={activeSection === 3 ? "visible" : "hidden"}
-              variants={fadeSlideUp}
-            >
-              <Footer />
-            </motion.div>
-          </div>
-        </ReactFullpage.Wrapper>
-      )}
+    // Mobile Experience - Your components inside MobileFullpage
+    <MobileFullpage 
+      sections={mobileSections} 
+      onSectionChange={handleMobileSectionChange}
+      currentSection={currentMobileSection}
     />
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;
