@@ -5,8 +5,10 @@ import {
   popupInitial,
   popupAnimate,
   popupExit,
-} from "./animations/Hero"
+} from "./animations/HeroAnimations"
 import { ScrollAnimation } from "./animations/ScrollAnimation";
+
+
 
 const Hero = () => {
   const [isHoveredOne, setIsHoveredOne] = useState(false)
@@ -22,9 +24,7 @@ const Hero = () => {
 
   // 02-02-2025
   //TODO - find svg icons that will animate on screen when the word hover is hovered (check the hero design on my X liked page)
-  //TODO - Implement oladev's tile scroll on the entire site using react-scroll, react fullpage or any related library _____ Implementation has alreadgy started on a codesandbox test app
-
-
+  
 
 
   return (
@@ -51,7 +51,7 @@ const Hero = () => {
                     initial={popupInitial}
                     animate={popupAnimate(isTapped)}
                     exit={popupExit}
-                    className="absolute top-10 left-10 bg-red-600 border p-3 rounded shadow-lg h-40 w-1/3 text-white"
+                    className="absolute top-10 left-10 bg-red-600 border p-3 rounded shadow-lg text-white"
                   >
                     <p>🛠 I build cool things</p>
                   </motion.div>
@@ -60,7 +60,7 @@ const Hero = () => {
                     initial={popupInitial}
                     animate={popupAnimate(isTapped)}
                     exit={popupExit}
-                    className="absolute top-80 right-10 bg-yellow-600 border p-3 rounded shadow-lg h-40 w-1/3 text-white"
+                    className="absolute top-80 right-10 bg-yellow-600 border p-3 rounded shadow-lg text-white"
                   ><p>🛠 And maintain them</p>
                   </motion.div>
                 </>
@@ -84,7 +84,7 @@ const Hero = () => {
                       initial={popupInitial}
                       animate={popupAnimate(isTapped)}
                       exit={popupExit}
-                      className="absolute top-10 right-10 bg-blue-600 border p-3 rounded shadow-lg h-40 w-1/3 text-white"
+                      className="absolute top-10 right-10 bg-blue-600 border p-3 rounded shadow-lg text-white"
                     ><p>🛠 I build cool stuffs</p>
                     </motion.div>
                     <motion.div
@@ -92,7 +92,7 @@ const Hero = () => {
                       initial={popupInitial}
                       animate={popupAnimate(isTapped)}
                       exit={popupExit}
-                      className="absolute bottom-10 left-10 lg:top-96 bg-green-600 border p-3 rounded shadow-lg h-40 w-1/3 text-white"
+                      className="absolute left-10 lg:top-96 bg-green-600 border p-3 rounded shadow-lg text-white"
                     ><p>🛠 And maintain them</p>
                     </motion.div>
 
@@ -109,8 +109,24 @@ const Hero = () => {
 
       <figure className="w-52 md:w-60">
         <ScrollAnimation>
-
-          <img src={hero} alt="traditional man" className="hover:rotate-6 hover:scale-105 transition-transform duration-300 ease-in-out" />
+          <motion.div
+            whileHover={{ rotate: 6, scale: 1.05 }}
+            whileTap={{ 
+              scale: 0.95,
+              transition: { 
+                type: "spring",
+                stiffness: 400,
+                damping: 10
+              }
+            }}
+            transition={{ type: "spring", stiffness: 300, damping: 10 }}
+          >
+            <img 
+              src={hero} 
+              alt="traditional man" 
+              className="w-full h-auto"
+            />
+          </motion.div>
         </ScrollAnimation>
       </figure>
     </section>

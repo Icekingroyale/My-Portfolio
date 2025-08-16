@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Homepage from "./components/pages/Homepage";
 import About from "./components/navlinks/About";
 import Resume from "./components/pages/Resume";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 
@@ -12,11 +13,12 @@ import Resume from "./components/pages/Resume";
 const App = () => {
   return (
     <div className='overflow-hidden'>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
     </div>
   );
 };

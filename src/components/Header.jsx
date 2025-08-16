@@ -4,12 +4,13 @@ import NavigationLinks from './navlinks/NavigationLinks.jsx';
 import MenuLinks from "./navlinks/MenuLinks.jsx";
 import LgMenuDrop from "./LgMenuDrop.jsx";
 import { Sling as Hamburger } from 'hamburger-react'
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 
 const Header = () => {
 
     const [isToggled, setIsToggled] = useState(false);
+    const location = useLocation();
 
 
 
@@ -17,7 +18,16 @@ const Header = () => {
         setIsToggled(!isToggled)
     }
 
-
+//handle logo click
+const handleLogoClick = (e) => {
+    if (location.pathname === "/") {
+        e.preventDefault(); // prevent reload/reroute
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth", // smooth scroll animation
+        });
+    }
+}
 
     // 25-01-2025
     //TODO - Make the header stick on all pages but with different background and content colors
@@ -35,10 +45,12 @@ const Header = () => {
     //05-04-2-25
     // TODO - make the LgMenuDropDown disappers on arrow+down keypress & onClick anywhere on the hero and header
 
+
+
     let header = <>
         <header className='fixed bg-transparent w-full flex justify-between bg-[#EFE9D5] z-[1000]'>
 
-            <NavLink to="/">
+            <NavLink to="/" onClick={handleLogoClick}>
                 <img src={Logo} alt="site logo" className="h-14" />
             </NavLink>
 
