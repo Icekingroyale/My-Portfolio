@@ -12,6 +12,10 @@ import Fullpage, { FullpageSection, FullPageSections, FullpageNavigation } from 
 // 15-02-2025
 // TODO - Add fade in animations on scroll
 
+// 16-08-25
+// TODO - Fix the clustering that occurs when you enter dev mode on browser
+
+
 
 
 const Homepage = () => {

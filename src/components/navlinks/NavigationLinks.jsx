@@ -36,8 +36,8 @@ const NavigationLinks = () => {
                 <NavLink 
                     to='/' 
                     // style={navLinkStyle}
-                    className={({ isActive }) => 
-                        `px-2 py-1 rounded transition-colors duration-300 ${isActive ? 'font-semibold hover:text-blue-600' : 'text-gray-700 hover:text-blue-600 hover:font-semibold'}`
+                    className={({ isActive }) =>    
+                        `px-2 py-1 rounded transition-colors duration-300 ${isActive ? 'font-semibold underline hover:text-blue-600' : 'hover:text-blue-600 hover:font-semibold'}`
                     }   
                 >
                     Home
@@ -45,7 +45,7 @@ const NavigationLinks = () => {
                 <NavLink 
                     to="/about" 
                     className={({ isActive }) => 
-                        `px-2 py-1 rounded transition-colors duration-300 ${isActive ? 'font-semibold hover:text-yellow-600' : 'text-gray-700 hover:text-yellow-600 hover:font-semibold'}`
+                        `px-2 py-1 rounded transition-colors duration-300 ${isActive ? 'font-semibold underline hover:text-yellow-600' : 'hover:text-yellow-600 hover:font-semibold'}`
                     }   
                 >
                     About
@@ -54,14 +54,14 @@ const NavigationLinks = () => {
                 <NavLink 
                     to="/resume" 
                     className={({ isActive }) => 
-                        `px-2 py-1 rounded transition-colors duration-300 ${isActive ? 'font-semibold hover:text-red-600' : 'text-gray-700 hover:text-red-600 hover:font-semibold'}`
+                        `px-2 py-1 rounded transition-colors duration-300 ${isActive ? 'font-semibold underline hover:text-red-600' : 'hover:text-red-600 hover:font-semibold'}`
                     }
                 >
                     Resume
                 </NavLink>
             </nav>
             <NavLink 
-                to="/"
+                to="/contact"
                 className="px-2 bg-green-500 border-2 border-gray-600 rounded-md hover:bg-green-800 hover:text-white h-10 flex items-center transition-colors duration-300"
             >
                 Contact Me

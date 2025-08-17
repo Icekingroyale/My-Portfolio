@@ -5,6 +5,7 @@ import MenuLinks from "./navlinks/MenuLinks.jsx";
 import LgMenuDrop from "./LgMenuDrop.jsx";
 import { Sling as Hamburger } from 'hamburger-react'
 import { NavLink, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 
 const Header = () => {
@@ -40,18 +41,36 @@ const handleLogoClick = (e) => {
     // TODO - The header is fixed and the background color is transparent, I want to make whatever that is scrolled into the space of the to be blur
 
     //12-02-25
-    // TODO - Resolve the FullPageNav and LgMenuDropDown conflex
+    // TODO - Resolve the FullPageNav and LgMenuDropDown conflict
 
     //05-04-2-25
     // TODO - make the LgMenuDropDown disappers on arrow+down keypress & onClick anywhere on the hero and header
 
+    //16-08-25
+    // TODO - when I tap on my image for 20 times, it should show a firework like animation and say "Ah you found the easter egg. Just contact me already ^_^"
+
+    // TODO - When on MenuLinks, clicking any link/button should close the menuLink
+
+    //17-08-25
+    // TODO - The crown logo should animate on initial page load and any reload
 
 
     let header = <>
-        <header className='fixed bg-transparent w-full flex justify-between bg-[#EFE9D5] z-[1000]'>
+        <header className='fixed w-full flex justify-between z-[1000] md:backdrop-blur-sm bg-[#EFE9D5]/30 transition-all duration-300 lg:bg-transparent lg:backdrop-blur-0'>
 
-            <NavLink to="/" onClick={handleLogoClick}>
-                <img src={Logo} alt="site logo" className="h-14" />
+            <NavLink to="/" onClick={handleLogoClick} className="block">
+                <motion.img 
+                    src={Logo} 
+                    alt="site logo" 
+                    className="h-14"
+                    initial={{ rotate: 0 }}
+                    animate={{ rotate: 360 }}
+                    transition={{ 
+                        duration: 0.8,
+                        ease: "easeInOut",
+                      
+                    }}
+                />
             </NavLink>
 
 
@@ -61,7 +80,7 @@ const handleLogoClick = (e) => {
                 <MenuLinks />
             </div>
 
-            <button className="h-14 z-[1000] absolute right-0">
+            <button className="h-14 z-[1000] absolute right-0 bg-transparent">
                 <Hamburger toggled={isToggled} toggle={handleToggle} />
             </button>
 

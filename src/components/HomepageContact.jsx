@@ -25,7 +25,7 @@ const loadEmailJS = () => {
   });
 };
 
-const Contact = () => {
+const HomepageContact = () => {
   const [formData, setFormData] = useState({
     from_name: '',
     from_email: '',
@@ -122,7 +122,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact">
+    <div >
       <div className="min-h-screen bg-green-700 bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')] flex flex-col items-center justify-center gap-10">
         {initError && (
           <div className="mb-6 p-4 bg-yellow-100 text-yellow-700 rounded-lg">
@@ -185,4 +185,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default HomepageContact;
