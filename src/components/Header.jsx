@@ -56,7 +56,7 @@ const handleLogoClick = (e) => {
 
 
     let header = <>
-        <header className='fixed w-full flex justify-between z-[1000] md:backdrop-blur-sm bg-[#EFE9D5]/30 transition-all duration-300 lg:bg-transparent lg:backdrop-blur-0'>
+        <header className='fixed w-full flex justify-between z-[1000] backdrop-blur-md md:backdrop-blur-sm bg-[#EFE9D5]/30 transition-all duration-300 lg:bg-transparent lg:backdrop-blur-0'>
 
             <NavLink to="/" onClick={handleLogoClick} className="block">
                 <motion.img 

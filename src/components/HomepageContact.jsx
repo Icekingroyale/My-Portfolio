@@ -129,7 +129,7 @@ const HomepageContact = () => {
             {initError}
           </div>
         )}
-        <h2>Contact Me</h2>
+        <h2 className="" >Contact Me</h2>
         <form onSubmit={handleSubmit} className='flex flex-col gap-10 mx-5 my-5 justify-center w-80 md:w-3/5 md:mx-auto'>
           <div className='flex flex-col md:flex-row gap-10 md:gap-5'>
           
