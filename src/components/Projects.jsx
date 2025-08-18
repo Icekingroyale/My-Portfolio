@@ -4,6 +4,8 @@ import project2 from "../assets/fb.png";
 import project3 from "../assets/icon.jpg";
 import project4 from "../assets/Hero.jpeg";
 import { ScrollAnimation } from "./animations/ScrollAnimation";
+import { NavLink } from "react-router-dom";
+
 
 
 const Projects = ({ }) => {
@@ -63,9 +65,9 @@ const Projects = ({ }) => {
           </a>
         </ScrollAnimation>
       </div>
-      <button className="bg-gray-300 hover:bg-gray-600 hover:text-white rounded-lg px-5 py-2 mb-5 md:mt-10 ">
+      <NavLink to="/more-projects" className="bg-gray-300 hover:bg-gray-600 hover:text-white rounded-lg px-5 py-2 mb-5 md:mt-10 ">
         SEE MORE
-      </button>
+      </NavLink>
     </div>
   );
 };
