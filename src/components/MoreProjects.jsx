@@ -74,7 +74,7 @@ import React from 'react';
 import project1 from "../assets/Project1.jpg";
 import project2 from "../assets/Hero.jpeg";
 import project3 from "../assets/image-hero.jpg";
-import project4 from "../assets/smartUk.jpg";
+import project4 from "../assets/project4.jpg";
 import project5 from "../assets/contactForm.jpg";
 import project6 from "../assets/icon.jpg";
 import { ScrollAnimation } from "./animations/ScrollAnimation";
