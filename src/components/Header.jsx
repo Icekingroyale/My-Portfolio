@@ -94,7 +94,7 @@ const Header = () => {
             </AnimatePresence>
 
             {/* Hamburger Button */}
-            <button className="h-14 z-[1000] absolute right-10 bg-transparent hamburger-button">
+            <button className="h-14 z-[1000] absolute right-0 lg:right-10 bg-transparent hamburger-button">
                 <Hamburger toggled={isToggled} toggle={handleToggle} />
             </button>
 
