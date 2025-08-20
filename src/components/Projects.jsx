@@ -1,6 +1,6 @@
 import React from "react";
 import project1 from "../assets/image-hero.jpg";
-import project2 from "../assets/fb.png";
+import project2 from "../assets/Project1.jpg";
 import project3 from "../assets/icon.jpg";
 import project4 from "../assets/Hero.jpeg";
 import { ScrollAnimation } from "./animations/ScrollAnimation";
@@ -28,7 +28,7 @@ const Projects = ({ }) => {
           >
             <img src={project2} alt="" className="projects_img" />
 
-            <p>Fortune Block</p>
+            <p>NUFL</p>
           </a>
         </ScrollAnimation>
         <ScrollAnimation className="projects_img_div">

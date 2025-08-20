@@ -1,14 +1,16 @@
 import React from 'react'
 import Header from '../Header'
+// import Resume from '../Resume'
+import Resume from '../Resume'
 import Footer from '../Footer'
 import { useMediaQuery } from "react-responsive"; //to conditional render the Fullpage slide for large screens
 
 import Fullpage, { FullpageSection, FullPageSections, FullpageNavigation } from "@ap.cx/react-fullpage";
 
 
-const Resume = () => {
+const ResumePage = () => {
 
-    const isLargeScreen = useMediaQuery({ minWidth: 1024 })    
+    const isLargeScreen = useMediaQuery({ minWidth: 1024 })
 
 
     return isLargeScreen ? (
@@ -18,9 +20,7 @@ const Resume = () => {
             <FullPageSections>
                 <FullpageSection>
                     <Header />
-                    <div className='bg-white h-screen'>
-                        <h1>Resume</h1>
-                    </div>
+                    <Resume />
                 </FullpageSection>
                 <FullpageSection>
                     <Footer />
@@ -28,15 +28,13 @@ const Resume = () => {
             </FullPageSections>
         </Fullpage>
     )
-    : (
-        <>
-            <Header />
-            <div className='bg-white h-screen'>
-                <h1>Resume</h1>
-            </div>
-            <Footer />
-        </>
-    )
+        : (
+            <>
+                <Header />
+                <Resume />
+                <Footer />
+            </>
+        )
 }
 
-export default Resume
+export default ResumePage

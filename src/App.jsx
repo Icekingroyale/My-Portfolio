@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./components/pages/Homepage";
 import About from "./components/navlinks/About";
-import Resume from "./components/pages/Resume";
+import ResumePage from "./components/pages/ResumePage";
 import ScrollToTop from "./components/ScrollToTop";
 import ContactPage from "./components/pages/ContactPage";
 import MoreProjectsPage from "./components/pages/MoreProjectsPage";
@@ -17,7 +17,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/resume" element={<Resume />} />
+        <Route path="/resume" element={<ResumePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/more-projects" element={<MoreProjectsPage />} />
       </Routes>
