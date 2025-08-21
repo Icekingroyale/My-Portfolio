@@ -64,7 +64,7 @@ const Resume = () => {
             
           ))}
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center hidden lg:block">
+          <div className="hidden lg:block">
           <a
             href="/myResume.pdf"
             download="Chimaobi_Okeh_Resume.pdf"
