@@ -7,7 +7,7 @@ import { Sling as Hamburger } from 'hamburger-react'
 import { NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Header = () => {
+const Header = ({ hasScrollableContent = false }) => {
     const [isToggled, setIsToggled] = useState(false);
     const location = useLocation();
 
@@ -61,7 +61,7 @@ const Header = () => {
     }
 
     return (
-        <header className='fixed w-full flex justify-between z-[1000] backdrop-blur-md md:backdrop-blur-sm bg-[#EFE9D5]/30 transition-all duration-300 lg:bg-transparent lg:backdrop-blur-0'>
+        <header className={`fixed w-full flex justify-between z-[1000] transition-all duration-300 ${hasScrollableContent ? 'lg:backdrop-blur-md lg:bg-[#EFE9D5]/30' : ''} backdrop-blur-md bg-[#EFE9D5]/30 lg:bg-transparent lg:backdrop-blur-0`}>
             <NavLink to="/" onClick={handleLogoClick} className="block">
                 <motion.img
                     src={Logo}

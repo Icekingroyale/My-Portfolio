@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide FullPage.js watermark but keep navigation dots */
+.fp-watermark {
+  display: none !important;
+}
+
 
 :root {
     --primary: #1230AE;

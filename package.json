@@ -10,10 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ap.cx/react-fullpage": "^0.3.0",
     "@emailjs/browser": "^4.4.1",
     "embla-carousel-react": "^8.5.2",
     "framer-motion": "^12.23.12",
+    "fullpage.js": "^4.0.37",
     "hamburger-react": "^2.5.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

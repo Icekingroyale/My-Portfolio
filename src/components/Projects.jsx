@@ -94,13 +94,13 @@ const Projects = () => {
     { id: 1, title: "NUFL", image: project2, demoUrl: "https://fortune-block.netlify.app/", codeUrl: "https://github.com/Icekingroyale/nufl-football-league" },
     { id: 2, title: "Portfolio Site", image: project4, demoUrl: "https://icekingroyale.vercel.app/", codeUrl: "https://github.com/Icekingroyale/My-Portfolio" },
     { id: 3, title: "LoopStudio Landing Page", image: project1, demoUrl: "https://icekingroyale.github.io/LoopStudiosLandingPage/", codeUrl: "https://github.com/Icekingroyale/LoopStudiosLandingPage" },
-    { id: 4, title: "Humble Beginnings", image: project3, demoUrl: "https://icekingroyale.github.io/ChimaobiOkeh/", codeUrl: "https://github.com/Icekingroyale/ChimaobiOkeh" },
+    // { id: 4, title: "Humble Beginnings", image: project3, demoUrl: "https://icekingroyale.github.io/ChimaobiOkeh/", codeUrl: "https://github.com/Icekingroyale/ChimaobiOkeh" },
   ];
 
   return (
-    <section className="bg-[#71BBB2] bg-[url('https://www.transparenttextures.com/patterns/diagonal-waves.png')] py-16 px-6">
+    <section id="projects-section" className="bg-[#71BBB2] lg:min-h-screen bg-[url('https://www.transparenttextures.com/patterns/diagonal-waves.png')] py-16 px-6">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Recent Projects</h2>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-6xl  mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}
