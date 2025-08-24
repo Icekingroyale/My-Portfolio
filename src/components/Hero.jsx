@@ -1,130 +1,107 @@
 import React, { useState } from "react";
 import hero from "../assets/Hero.jpeg";
-import { motion, AnimatePresence } from 'framer-motion'
-import {
-  popupInitial,
-  popupAnimate,
-  popupExit,
-} from "./animations/HeroAnimations"
+import { motion, AnimatePresence } from 'framer-motion';
+// Import the new set of 8 icons
+import { FaReact, FaNodeJs, FaAws, FaFigma } from 'react-icons/fa';
+import { SiTailwindcss, SiJavascript, SiTypescript, SiGit } from 'react-icons/si';
+
+import { 
+  popupInitial, 
+  popupAnimate, 
+  popupExit, 
+  imageAnimationProps
+} from "./animations/HeroAnimations";
 import { ScrollAnimation } from "./animations/ScrollAnimation";
 
+// --- Icon Data Arrays for Cleaner JSX ---
+const iconSetOne = [
+  { Icon: FaReact, position: 'absolute top-[15%] left-[10%] md:top-[20%] md:left-[25%]', color: 'bg-sky-500' },
+  { Icon: FaNodeJs, position: 'absolute top-[15%] right-[10%] md:top-[20%] md:right-[25%]', color: 'bg-green-600' },
+  { Icon: FaAws, position: 'absolute bottom-[15%] left-[10%] md:bottom-[20%] md:left-[25%]', color: 'bg-orange-500' },
+  { Icon: SiTailwindcss, position: 'absolute bottom-[15%] right-[10%] md:bottom-[20%] md:right-[25%]', color: 'bg-cyan-500' },
+];
 
+const iconSetTwo = [
+  { Icon: SiJavascript, position: 'absolute top-[30%] left-[5%] md:top-[35%] md:left-[15%]', color: 'bg-yellow-400' },
+  { Icon: SiTypescript, position: 'absolute top-[30%] right-[5%] md:top-[35%] md:right-[15%]', color: 'bg-blue-600' },
+  { Icon: FaFigma, position: 'absolute bottom-[30%] left-[5%] md:bottom-[35%] md:left-[15%]', color: 'bg-purple-600' },
+  { Icon: SiGit, position: 'absolute bottom-[30%] right-[5%] md:bottom-[35%] md:right-[15%]', color: 'bg-red-500' },
+];
 
 const Hero = () => {
-  const [isHoveredOne, setIsHoveredOne] = useState(false)
-  const [isHoveredTwo, setIsHoveredTwo] = useState(false)
-  const [isTapped, setIsTapped] = useState(false)
+  const [isHoveredOne, setIsHoveredOne] = useState(false);
+  const [isHoveredTwo, setIsHoveredTwo] = useState(false);
+  const [isTapped, setIsTapped] = useState(false);
 
-
+  // This handler triggers the bounce animation on all visible icons
   const handleTap = () => {
-    setIsTapped(true)
-    setTimeout(() => setIsTapped(false), 300)
-  }
-
-
-  // 02-02-2025
-  //TODO - find svg icons that will animate on screen when the word hover is hovered (check the hero design on my X liked page)
-  
-
+    setIsTapped(true);
+    // Reset the tapped state after the animation duration
+    setTimeout(() => setIsTapped(false), 500);
+  };
 
   return (
-    <section className="bg-[#EFE9D5] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')] flex flex-col md:flex-row gap-6 lg:gap-20 items-center min-h-screen w-full justify-center md:p-10 py-20 overflow-x-hidden">
+    // The parent section needs 'relative' for absolute positioning of children
+    <section className="relative bg-[#EFE9D5] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')] flex flex-col md:flex-row gap-6 lg:gap-20 items-center min-h-screen w-full justify-center md:p-10 py-20 overflow-hidden">
+      
+      {/* --- ICONS FOR FIRST HOVER --- */}
+      <AnimatePresence>
+        {isHoveredOne && iconSetOne.map(({ Icon, position, color }, index) => (
+          <motion.div
+            key={`icon-set-one-${index}`}
+            initial={popupInitial}
+            animate={popupAnimate(isTapped)}
+            exit={popupExit}
+            className={`${position} ${color} p-3 md:p-4 rounded-full shadow-lg text-white text-3xl md:text-4xl z-30`}
+          >
+            <Icon />
+          </motion.div>
+        ))}
+      </AnimatePresence>
+
+      {/* --- ICONS FOR SECOND HOVER --- */}
+      <AnimatePresence>
+        {isHoveredTwo && iconSetTwo.map(({ Icon, position, color }, index) => (
+          <motion.div
+            key={`icon-set-two-${index}`}
+            initial={popupInitial}
+            animate={popupAnimate(isTapped)}
+            exit={popupExit}
+            className={`${position} ${color} p-3 md:p-4 rounded-full shadow-lg text-white text-3xl md:text-4xl z-30`}
+          >
+            <Icon />
+          </motion.div>
+        ))}
+      </AnimatePresence>
+
+      {/* --- MAIN CONTENT --- */}
       <ScrollAnimation>
-
-        <article className="text-center md:text-left">
+        <article className="text-center md:text-left z-20">
           <h1 className="text-blue-600">Hi I'm Chimaobi</h1>
-          <h2 className="text-3xl md:text-5xl font-bold mt-3 text-red-600">I'm Software Engineer</h2>
-          <h2 className="mt-3 max-w-96"> I build simple, effective software solutions that solve real problems <strong className="text-blue-600 lg:hover:underline"
-            onMouseEnter={() => setIsHoveredOne(true)}
-            onMouseLeave={() => {
-              setIsHoveredOne(false)
-              setIsTapped(false)
-            }
-            }
-            onClick={handleTap}
-          >   HOVER
-            <AnimatePresence>
-              {isHoveredOne && (
-                <>
-                  <motion.div
-                    key="popup1"
-                    initial={popupInitial}
-                    animate={popupAnimate(isTapped)}
-                    exit={popupExit}
-                    className="absolute top-10 left-10 bg-red-600 border p-3 rounded shadow-lg text-white"
-                  >
-                    <p>🛠 I build cool things</p>
-                  </motion.div>
-                  <motion.div
-                    key="popup2"
-                    initial={popupInitial}
-                    animate={popupAnimate(isTapped)}
-                    exit={popupExit}
-                    className="absolute top-80 right-10 bg-yellow-600 border p-3 rounded shadow-lg text-white"
-                  ><p>🛠 And maintain them</p>
-                  </motion.div>
-                </>
-
-
-              )}
-            </AnimatePresence></strong> for businesses, students, and everyday users. <strong className="text-blue-600 lg:hover:underline"
-              onMouseEnter={() => setIsHoveredTwo(true)}
-              onMouseLeave={() => {
-                setIsHoveredTwo(false)
-                setIsTapped(false)
-              }
-              }
+          <h2 className="text-3xl md:text-5xl font-bold mt-3 text-red-600">I'm a Software Engineer</h2>
+          <h2 className="mt-3 max-w-lg"> {/* Increased max-width for better text flow */}
+            I build simple, effective software solutions that solve real problems <strong className="text-blue-600 lg:hover:underline cursor-pointer"
+              onMouseEnter={() => setIsHoveredOne(true)}
+              onMouseLeave={() => setIsHoveredOne(false)}
               onClick={handleTap}
-            >
-              <AnimatePresence>
-                {isHoveredTwo && (
-                  <>
-                    <motion.div
-                      key="popup1"
-                      initial={popupInitial}
-                      animate={popupAnimate(isTapped)}
-                      exit={popupExit}
-                      className="absolute top-10 right-10 bg-blue-600 border p-3 rounded shadow-lg text-white"
-                    ><p>🛠 I build cool stuffs</p>
-                    </motion.div>
-                    <motion.div
-                      key="popup1"
-                      initial={popupInitial}
-                      animate={popupAnimate(isTapped)}
-                      exit={popupExit}
-                      className="absolute left-10 lg:top-96 bg-green-600 border p-3 rounded shadow-lg text-white"
-                    ><p>🛠 And maintain them</p>
-                    </motion.div>
-
-                  </>
-                )}
-              </AnimatePresence>HOVER</strong> Let's get to work!
+            > HOVER </strong> 
+            for businesses, students, and everyday users. <strong className="text-blue-600 lg:hover:underline cursor-pointer"
+              onMouseEnter={() => setIsHoveredTwo(true)}
+              onMouseLeave={() => setIsHoveredTwo(false)}
+              onClick={handleTap}
+            > HOVER </strong> 
+            Let's get to work!
           </h2>
         </article>
       </ScrollAnimation>
 
-
-      {/* // 06-04-2025 */}
-      {/* //TODO - replace image hover animation with framer */}
-
-      <figure className="w-52 md:w-60">
+      <figure className="w-52 md:w-60 z-10">
         <ScrollAnimation>
-          <motion.div
-            whileHover={{ rotate: 6, scale: 1.05 }}
-            whileTap={{ 
-              scale: 0.95,
-              transition: { 
-                type: "spring",
-                stiffness: 400,
-                damping: 10
-              }
-            }}
-            transition={{ type: "spring", stiffness: 300, damping: 10 }}
-          >
+          <motion.div {...imageAnimationProps}>
             <img 
               src={hero} 
               alt="traditional man" 
-              className="w-full h-auto"
+              className="w-full h-auto rounded-lg shadow-xl" // Added some style to the image
             />
           </motion.div>
         </ScrollAnimation>

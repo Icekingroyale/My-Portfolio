@@ -1,20 +1,19 @@
-// Animation.js
+// HeroAnimations.jsx
 
-// Popup entrance animation
-export const popupInitial = { opacity: 0, y: -10 };
+// --- Pop-up Icon Animations ---
 
-export const popupExit = { opacity: 0, y: -10 };
+// Initial state for the icons: invisible and slightly smaller
+export const popupInitial = { opacity: 0, scale: 0.5, y: -10 };
 
-// export const initialAnimate 
-// export const afterAnimate
-// use the 
+// Exit state for the icons: fade out and shrink
+export const popupExit = { opacity: 0, scale: 0.5, y: -10 };
 
-// Dynamic animate config that adds "tap" effect
+// Dynamic animate state for icons, which includes a "wobble" effect on tap
 export const popupAnimate = (isTapped) => ({
   opacity: 1,
+  scale: isTapped ? [1, 1.1, 0.9, 1.05, 1] : 1, // Enhanced bounce effect
   y: 0,
-  scale: isTapped ? [1, 1.05, 0.95, 1.02, 1] : 1,
-  rotate: isTapped ? [0, 2, -2, 1, 0] : 0,
+  rotate: isTapped ? [0, 5, -5, 2, 0] : 0,
   transition: {
     duration: isTapped ? 0.5 : 0.2,
     type: isTapped ? "tween" : "spring",
@@ -22,8 +21,21 @@ export const popupAnimate = (isTapped) => ({
   },
 });
 
-// Optional: clean reusable transition (if needed elsewhere)
-export const defaultTransition = {
-  duration: 0.2,
-  ease: "easeInOut",
+
+// --- Hero Image Animation ---
+
+// Reusable animation props for the main hero image
+export const imageAnimationProps = {
+  whileHover: { rotate: 6, scale: 1.05 },
+  whileTap: { 
+    scale: 0.95,
+    transition: { 
+      type: "spring",
+      stiffness: 400,
+      damping: 10
+    }
+  },
+  transition: { type: "spring", stiffness: 300, damping: 10 }
 };
+
+
