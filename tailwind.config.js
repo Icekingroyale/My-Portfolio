@@ -19,7 +19,7 @@ export default {
     plugins: [
         function ({ addUtilities }) {
             const newUtilities = {
-                '.border': {
+                '.debug-border': {
                     border: '2px solid red',
                 },
             }

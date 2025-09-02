@@ -80,17 +80,17 @@ const Hero = () => {
           <h1 className="text-blue-600">Hi I'm Chimaobi</h1>
           <h2 className="text-3xl md:text-5xl font-bold mt-3 text-red-600">I'm a Software Engineer</h2>
           <h2 className="mt-3 max-w-lg"> {/* Increased max-width for better text flow */}
-            I build simple, effective software solutions that solve real problems <strong className="text-blue-600 lg:hover:underline cursor-pointer"
+            I build simple, effective  <strong className="text-blue-600 lg:hover:underline cursor-pointer"
               onMouseEnter={() => setIsHoveredOne(true)}
               onMouseLeave={() => setIsHoveredOne(false)}
               onClick={handleTap}
-            > HOVER </strong> 
-            for businesses, students, and everyday users. <strong className="text-blue-600 lg:hover:underline cursor-pointer"
+            > software solutions </strong> 
+            that solve real problems for businesses, students, and <strong className="text-blue-600 lg:hover:underline cursor-pointer"
               onMouseEnter={() => setIsHoveredTwo(true)}
               onMouseLeave={() => setIsHoveredTwo(false)}
               onClick={handleTap}
-            > HOVER </strong> 
-            Let's get to work!
+            > everyday </strong> 
+            users. Let's get to work!!
           </h2>
         </article>
       </ScrollAnimation>
