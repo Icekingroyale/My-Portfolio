@@ -86,13 +86,12 @@ import { NavLink } from "react-router-dom";
 import ProjectCard from "./ProjectCard";
 import project1 from "../assets/image-hero.jpg";
 import project2 from "../assets/Project1.jpg";
-import project3 from "../assets/icon.jpg";
-import project4 from "../assets/Hero.jpeg";
+import project3 from "../assets/project4.jpg";
 
 const Projects = () => {
   const projects = [
-    { id: 1, title: "NUFL", image: project2, demoUrl: "https://fortune-block.netlify.app/", codeUrl: "https://github.com/Icekingroyale/nufl-football-league" },
-    { id: 2, title: "Portfolio Site", image: project4, demoUrl: "https://icekingroyale.vercel.app/", codeUrl: "https://github.com/Icekingroyale/My-Portfolio" },
+    { id: 1, title: "NUFL", image: project2, demoUrl: "https://nufl.netlify.app/", codeUrl: "https://github.com/Icekingroyale/nufl-football-league" },
+    { id: 2, title: "Educational Sentiment Analysis", image: project3, demoUrl: "https://educational-sentiment-analysis.netlify.app/", codeUrl: "https://github.com/Icekingroyale/Educational-Sentiment-Analysis" },
     { id: 3, title: "LoopStudio Landing Page", image: project1, demoUrl: "https://icekingroyale.github.io/LoopStudiosLandingPage/", codeUrl: "https://github.com/Icekingroyale/LoopStudiosLandingPage" },
     // { id: 4, title: "Humble Beginnings", image: project3, demoUrl: "https://icekingroyale.github.io/ChimaobiOkeh/", codeUrl: "https://github.com/Icekingroyale/ChimaobiOkeh" },
   ];
