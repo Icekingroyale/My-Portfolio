@@ -57,7 +57,7 @@ const Footer = () => {
         <section className="flex flex-col-reverse gap-10 md:flex-row md:justify-between">
           <p className="px-5 mx-auto md:mx-0">&copy; Chimaobi Okeh {year}</p>
           <figure className="gap-16 px-5 flex">
-            <a href="https://www.linkedin.com/in/chimaobi-okeh" target="_blank">
+            <a href="https://www.linkedin.com/in/chimaobiokeh" target="_blank">
               <img src={linkedin} alt="linkedin logo" className="h-10 invert" />
             </a>
             <a href="https://github.com/Icekingroyale" target="_blank">
