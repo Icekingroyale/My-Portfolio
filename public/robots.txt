@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://icekingroyale.vercel.app/sitemap.xml
