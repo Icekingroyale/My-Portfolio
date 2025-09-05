@@ -91,7 +91,7 @@ const Resume = () => {
           about my projects, achievements, and technical expertise.
         </p>
                 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 items-center">
           <a
             href="/myResume.pdf"
             download="Chimaobi_Okeh_Resume.pdf"
