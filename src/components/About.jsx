@@ -26,7 +26,6 @@ const AboutMeSection = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const profilePic = "https://placehold.co/400x500/E8E8E8/333333?text=Your+Photo";
   
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24 bg-white rounded-3xl shadow-xl p-8 md:p-12 lg:p-16">

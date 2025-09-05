@@ -19,7 +19,7 @@ const Resume = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 flex flex-col justify-center items-center px-6 py-20">
+    <section className="min-h-screen bg-[#bcdee7] bg-[url('https://www.transparenttextures.com/patterns/cardboard.png')] flex flex-col justify-center items-center px-6 py-20">
       
       {/* Header */}
       <div className="text-center mb-12 max-w-3xl">
