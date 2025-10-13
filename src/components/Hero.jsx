@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import hero from "../assets/Hero.jpeg";
+import hero from "../assets/Hero.jpg";
 import { motion, AnimatePresence } from 'framer-motion';
 // Import the new set of 8 icons
 import { FaReact, FaNodeJs, FaAws, FaFigma } from 'react-icons/fa';
@@ -42,7 +42,7 @@ const Hero = () => {
 
   return (
     // The parent section needs 'relative' for absolute positioning of children
-    <section className="relative bg-[#5e5d2c] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')] flex flex-col md:flex-row gap-6 lg:gap-20 items-center min-h-screen w-full justify-center md:p-10 py-20 overflow-hidden">
+    <section className="relative bg-[#0f7481] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')] flex flex-col md:flex-row gap-6 lg:gap-20 items-center min-h-screen w-full justify-center md:p-10 py-20 overflow-hidden">
       
       {/* --- ICONS FOR FIRST HOVER --- */}
       <AnimatePresence>
@@ -80,12 +80,12 @@ const Hero = () => {
           <h1 className="">Hi I'm Chimaobi</h1>
           <h2 className="text-3xl md:text-5xl font-bold mt-3 text-blue-300">I'm a Software Engineer</h2>
           <h2 className="mt-3 max-w-lg text-white"> {/* Increased max-width for better text flow */}
-            I build simple, effective  <strong className="text-green-400 lg:hover:underline cursor-pointer"
+            I build simple, effective  <strong className="text-[#fa8fe8] lg:hover:underline cursor-pointer"
               onMouseEnter={() => setIsHoveredOne(true)}
               onMouseLeave={() => setIsHoveredOne(false)}
               onClick={handleTap}
             > software solutions </strong> 
-            that solve real problems for businesses, students, and <strong className="text-green-400 lg:hover:underline cursor-pointer"
+            that solve real problems for businesses, students, and <strong className="text-[#fa8fe8] lg:hover:underline cursor-pointer"
               onMouseEnter={() => setIsHoveredTwo(true)}
               onMouseLeave={() => setIsHoveredTwo(false)}
               onClick={handleTap}
@@ -95,7 +95,7 @@ const Hero = () => {
         </article>
       </ScrollAnimation>
 
-      <figure className="w-52 md:w-60 z-10">
+      <figure className="lg:w-[27%] w-2/3 z-10">
         <ScrollAnimation>
           <motion.div {...imageAnimationProps}>
             <img 
