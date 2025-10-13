@@ -50,10 +50,10 @@ const AboutMeSection = () => {
           I'm a certified software engineer...
         </h2>
         <p className="leading-relaxed text-base sm:text-lg text-neutral-700 mb-6">
-          From the first time I saw the <span className="text-black font-medium">Johny Castaway screensaver</span> on my dad's old Windows PC, I was hooked. That quirky animation sparked a deep curiosity about computers and planted the seed for my journey into tech.
+          From the first time I saw the <span className="text-black font-semibold">Johny Castaway screensaver</span> on my dad's old Windows PC, I was hooked. That quirky animation sparked a deep curiosity about computers and planted the seed for my journey into tech.
         </p>
         <p className="leading-relaxed text-base sm:text-lg text-neutral-700 mb-6">
-          Today, I focus on <span className="text-black font-medium">web development</span> but remain drawn to other areas like mobile apps, game development, and beyond. Each project is both a challenge and an opportunity to explore, experiment, and expand my skills. The rise of <span className="text-black font-medium">AI</span> has only fueled this drive—working with AI as a coding partner lets me move faster, think bigger, and push past limits.
+          Today, I focus on <span className="text-black font-semibold">web development</span> but remain drawn to other areas like mobile apps, game development, and beyond. Each project is both a challenge and an opportunity to explore, experiment, and expand my skills. The rise of <span className="text-black font-semibold">AI</span> has only fueled this drive—working with AI as a coding partner lets me move faster, think bigger, and push past limits.
         </p>
         <p className="leading-relaxed text-base sm:text-lg text-neutral-700">
           That same spirit of curiosity and innovation led me to create <span className="text-black font-bold">ICEKING LABS</span>, my personal tech brand inspired by Bell Labs.
