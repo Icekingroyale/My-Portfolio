@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaReact, FaBootstrap, FaWordpress, FaLaravel } from 'react-icons/fa';
 import { SiTailwindcss, SiMysql, SiGit, SiExpress } from 'react-icons/si';
 
-import { 
-  popupInitial, 
-  popupAnimate, 
-  popupExit, 
+import {
+  popupInitial,
+  popupAnimate,
+  popupExit,
   imageAnimationProps
 } from "./animations/HeroAnimations";
 import { ScrollAnimation } from "./animations/ScrollAnimation";
@@ -24,7 +24,7 @@ const iconSetOne = [
 const iconSetTwo = [
   { Icon: FaBootstrap, position: 'absolute top-[30%] left-[5%] md:top-[35%] md:left-[15%]', color: 'bg-purple-600' },
   { Icon: SiMysql, position: 'absolute top-[30%] right-[5%] md:top-[35%] md:right-[15%]', color: 'bg-blue-600' },
-  { Icon: FaLaravel, position: 'absolute bottom-[30%] left-[5%] md:bottom-[35%] md:left-[15%]', color:'text-red-600 bg-gray-200' },
+  { Icon: FaLaravel,position: 'absolute bottom-[30%] left-[5%] md:bottom-[35%] md:left-[15%]', color: 'bg-gray-200 text-red-600'},
   { Icon: SiGit, position: 'absolute bottom-[30%] right-[5%] md:bottom-[35%] md:right-[15%]', color: 'bg-red-500' },
 ];
 
@@ -43,7 +43,7 @@ const Hero = () => {
   return (
     // The parent section needs 'relative' for absolute positioning of children
     <section className="relative bg-[#0f7481] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png')] flex flex-col md:flex-row gap-6 lg:gap-20 items-center min-h-screen w-full justify-center md:p-10 py-20 overflow-hidden">
-      
+
       {/* --- ICONS FOR FIRST HOVER --- */}
       <AnimatePresence>
         {isHoveredOne && iconSetOne.map(({ Icon, position, color }, index) => (
@@ -84,12 +84,12 @@ const Hero = () => {
               onMouseEnter={() => setIsHoveredOne(true)}
               onMouseLeave={() => setIsHoveredOne(false)}
               onClick={handleTap}
-            > software solutions </strong> 
+            > software solutions </strong>
             that solve real problems for businesses, students, and <strong className="text-[#fa8fe8] lg:hover:underline cursor-pointer"
               onMouseEnter={() => setIsHoveredTwo(true)}
               onMouseLeave={() => setIsHoveredTwo(false)}
               onClick={handleTap}
-            > everyday </strong> 
+            > everyday </strong>
             users. Let's get to work!!
           </h2>
         </article>
@@ -98,9 +98,9 @@ const Hero = () => {
       <figure className="lg:w-[27%] w-2/3 z-10">
         <ScrollAnimation>
           <motion.div {...imageAnimationProps}>
-            <img 
-              src={hero} 
-              alt="traditional man" 
+            <img
+              src={hero}
+              alt="traditional man"
               className="w-full h-auto rounded-lg shadow-xl" // Added some style to the image
             />
           </motion.div>
