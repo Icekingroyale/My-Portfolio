@@ -24,7 +24,7 @@ const iconSetOne = [
 const iconSetTwo = [
   { Icon: FaBootstrap, position: 'absolute top-[30%] left-[5%] md:top-[35%] md:left-[15%]', color: 'bg-purple-600' },
   { Icon: SiMysql, position: 'absolute top-[30%] right-[5%] md:top-[35%] md:right-[15%]', color: 'bg-blue-600' },
-  { Icon: FaLaravel, position: 'absolute bottom-[30%] left-[5%] md:bottom-[35%] md:left-[15%]', color:'text-[#FF2D20] bg-gray-200' },
+  { Icon: FaLaravel, position: 'absolute bottom-[30%] left-[5%] md:bottom-[35%] md:left-[15%]', color:'text-red-600 bg-gray-200' },
   { Icon: SiGit, position: 'absolute bottom-[30%] right-[5%] md:bottom-[35%] md:right-[15%]', color: 'bg-red-500' },
 ];
 
