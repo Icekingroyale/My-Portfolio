@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import hero from "../assets/Hero.jpg";
 import { motion, AnimatePresence } from 'framer-motion';
 // Import the new set of 8 icons
-import { FaReact, FaNodeJs, FaAws, FaFigma } from 'react-icons/fa';
-import { SiTailwindcss, SiJavascript, SiTypescript, SiGit } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaWordpress, FaLaravel } from 'react-icons/fa';
+import { SiTailwindcss, SiJavascript, SiMysql, SiGit } from 'react-icons/si';
 
 import { 
   popupInitial, 
@@ -17,14 +17,14 @@ import { ScrollAnimation } from "./animations/ScrollAnimation";
 const iconSetOne = [
   { Icon: FaReact, position: 'absolute top-[15%] left-[10%] md:top-[20%] md:left-[25%]', color: 'bg-sky-500' },
   { Icon: FaNodeJs, position: 'absolute top-[15%] right-[10%] md:top-[20%] md:right-[25%]', color: 'bg-green-600' },
-  { Icon: FaAws, position: 'absolute bottom-[15%] left-[10%] md:bottom-[20%] md:left-[25%]', color: 'bg-orange-500' },
+  { Icon: FaWordpress, position: 'absolute bottom-[15%] left-[10%] md:bottom-[20%] md:left-[25%]', color: 'bg-gray-500' },
   { Icon: SiTailwindcss, position: 'absolute bottom-[15%] right-[10%] md:bottom-[20%] md:right-[25%]', color: 'bg-cyan-500' },
 ];
 
 const iconSetTwo = [
   { Icon: SiJavascript, position: 'absolute top-[30%] left-[5%] md:top-[35%] md:left-[15%]', color: 'bg-yellow-400' },
-  { Icon: SiTypescript, position: 'absolute top-[30%] right-[5%] md:top-[35%] md:right-[15%]', color: 'bg-blue-600' },
-  { Icon: FaFigma, position: 'absolute bottom-[30%] left-[5%] md:bottom-[35%] md:left-[15%]', color: 'bg-purple-600' },
+  { Icon: SiMysql, position: 'absolute top-[30%] right-[5%] md:top-[35%] md:right-[15%]', color: 'bg-blue-600' },
+  { Icon: FaLaravel, position: 'absolute bottom-[30%] left-[5%] md:bottom-[35%] md:left-[15%]', color: 'bg-purple-600' },
   { Icon: SiGit, position: 'absolute bottom-[30%] right-[5%] md:bottom-[35%] md:right-[15%]', color: 'bg-red-500' },
 ];
 
