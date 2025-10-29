@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import hero from "../assets/Hero.jpg";
 import { motion, AnimatePresence } from 'framer-motion';
 // Import the new set of 8 icons
-import { FaReact, FaBootstrap, FaWordpress, FaLaravel } from 'react-icons/fa';
-import { SiTailwindcss, SiMysql, SiGit, SiExpress } from 'react-icons/si';
+import { FaReact, FaBootstrap, FaWordpress} from 'react-icons/fa';
+import { SiTailwindcss, SiMysql, SiGit, SiExpress, SiLaravel } from 'react-icons/si';
 
 import {
   popupInitial,
@@ -22,10 +22,10 @@ const iconSetOne = [
 ];
 
 const iconSetTwo = [
-  { Icon: FaBootstrap, position: 'absolute top-[30%] left-[5%] md:top-[35%] md:left-[15%]', color: 'bg-purple-600' },
-  { Icon: SiMysql, position: 'absolute top-[30%] right-[5%] md:top-[35%] md:right-[15%]', color: 'bg-blue-600' },
-  { Icon: FaLaravel,position: 'absolute bottom-[30%] left-[5%] md:bottom-[35%] md:left-[15%]', color: 'text-[#FF2D20] bg-white'},
-  { Icon: SiGit, position: 'absolute bottom-[30%] right-[5%] md:bottom-[35%] md:right-[15%]', color: 'bg-red-500' },
+  { Icon: FaBootstrap, position: 'absolute top-[30%] left-[5%] md:top-[35%] md:left-[15%]', color: 'bg-purple-600 text-white' },
+  { Icon: SiMysql, position: 'absolute top-[30%] right-[5%] md:top-[35%] md:right-[15%]', color: 'bg-blue-600 text-white' },
+  { Icon: SiLaravel, position: 'absolute bottom-[30%] left-[5%] md:bottom-[35%] md:left-[15%]', color: 'text-red-600 bg-gray-200'},
+  { Icon: SiGit, position: 'absolute bottom-[30%] right-[5%] md:bottom-[35%] md:right-[15%]', color: 'bg-red-500 text-white' },
 ];
 
 const Hero = () => {
@@ -67,7 +67,7 @@ const Hero = () => {
             initial={popupInitial}
             animate={popupAnimate(isTapped)}
             exit={popupExit}
-            className={`${position} ${color} p-3 md:p-4 rounded-full shadow-lg text-white text-3xl md:text-4xl z-30`}
+            className={`${position} ${color} p-3 md:p-4 rounded-full shadow-lg text-3xl md:text-4xl z-30`}
           >
             <Icon />
           </motion.div>

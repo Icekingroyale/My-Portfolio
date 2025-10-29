@@ -15,6 +15,11 @@ export default {
         },
     },
 
+//     safelist: [
+//     'text-red-600',
+//     'bg-gray-200',
+//     // add any other dynamic color classes you're using
+//   ],
 
     plugins: [
         function ({ addUtilities }) {
